@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.GrocerlyPartners" parent="Theme.Material3.DayNight.NoActionBar">
+
+         <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryContainer">@color/green</item>
+    </style>
+
+    <style name="Theme.GrocerlyPartners" parent="Base.Theme.GrocerlyPartners" />
+</resources>
