@@ -1,4 +1,4 @@
-package com.example.grocerlypartners.utils
+package com.example.grocerlypartners.model
 
 data class Account(
     val firstName:String,

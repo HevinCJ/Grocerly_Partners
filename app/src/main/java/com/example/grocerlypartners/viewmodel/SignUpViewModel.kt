@@ -2,7 +2,7 @@ package com.example.grocerlypartners.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.grocerlypartners.utils.Account
+import com.example.grocerlypartners.model.Account
 import com.example.grocerlypartners.utils.Constants.ACCOUNTS
 import com.example.grocerlypartners.utils.NetworkResult
 import com.example.grocerlypartners.utils.RegisterValidation
