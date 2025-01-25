@@ -4,6 +4,7 @@ plugins {
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
     alias(libs.plugins.google.gms.google.services)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -64,7 +65,14 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.savedstate)
 
+    //firestore
+    implementation (libs.firebase.firestore.ktx)
 
+    
+
+    //glide
+    implementation(libs.glide)
+    ksp(libs.ksp)
 
 
 
