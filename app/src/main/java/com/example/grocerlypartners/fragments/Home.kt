@@ -34,6 +34,7 @@ class Home : Fragment() {
         savedInstanceState: Bundle?
     ): View {
        home = FragmentHomeBinding.inflate(inflater,container,false)
+        homeViewModel.fetchProductAddedByPartnerFromFirebase()
         return binding.root
     }
 
@@ -42,11 +43,6 @@ class Home : Fragment() {
         actionToAddProduct()
         observeProductFetchFromFirebase()
         setRcViewForHomeAdaptor()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        observeProductFetchFromFirebase()
     }
 
     private fun setRcViewForHomeAdaptor() {
@@ -58,7 +54,6 @@ class Home : Fragment() {
 
     private fun observeProductFetchFromFirebase() {
        lifecycleScope.launch {
-
            homeViewModel.product.collect{result->
                when(result){
                    is NetworkResult.Error -> {
@@ -72,7 +67,9 @@ class Home : Fragment() {
                            homeAdaptor.setProduct(it)
                        }
                    }
-                   is NetworkResult.UnSpecified -> TODO()
+                   is NetworkResult.UnSpecified -> {
+
+                   }
                }
            }
        }
@@ -85,6 +82,11 @@ class Home : Fragment() {
                findNavController().navigate(R.id.action_home_to_addProduct)
            }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        home = null
     }
 
 
