@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -27,7 +29,11 @@ class Home : Fragment() {
     private val homeViewModel by viewModels<HomeViewModel>()
     private val homeAdaptor by lazy { HomeAdaptor() }
 
-
+    private val rotateOpen:Animation by lazy { AnimationUtils.loadAnimation(requireContext(),R.anim.rotate_open_anim) }
+    private val rotateClose:Animation by lazy { AnimationUtils.loadAnimation(requireContext(),R.anim.rotate_closed_anim) }
+    private val fromBottom:Animation by lazy { AnimationUtils.loadAnimation(requireContext(),R.anim.from_bottom_anim) }
+    private val toBottom:Animation by lazy { AnimationUtils.loadAnimation(requireContext(),R.anim.to_bottom_anim) }
+    private var isVisible = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,7 +46,7 @@ class Home : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        actionToAddProduct()
+        actionToAddProductAndShowOffers()
         observeProductFetchFromFirebase()
         setRcViewForHomeAdaptor()
     }
@@ -76,12 +82,50 @@ class Home : Fragment() {
 
     }
 
-    private fun actionToAddProduct() {
+    private fun setVisibility(isenabled: Boolean) {
+        binding.apply {
+            if (isenabled) {
+
+                offerbtn.visibility = View.VISIBLE
+                addProduct.visibility = View.VISIBLE
+
+            } else {
+                offerbtn.visibility = View.INVISIBLE
+                addProduct.visibility = View.INVISIBLE
+            }
+        }
+    }
+
+    private fun actionToAddProductAndShowOffers() {
         binding.apply {
            floatingActionButton2.setOnClickListener {
-               findNavController().navigate(R.id.action_home_to_addProduct)
+
+               isVisible = !isVisible
+               setVisibility(isVisible)
+               setAnimation(isVisible)
            }
         }
+    }
+
+    private fun setAnimation(isEnabled: Boolean) {
+       binding.apply {
+           if (isEnabled){
+               addProduct.startAnimation(fromBottom)
+               offerbtn.startAnimation(fromBottom)
+               floatingActionButton2.startAnimation(rotateOpen)
+           }else{
+               addProduct.startAnimation(toBottom)
+               offerbtn.startAnimation(toBottom)
+               floatingActionButton2.startAnimation(rotateClose)
+           }
+           addProduct.setOnClickListener {
+               findNavController().navigate(R.id.action_home_to_addProduct)
+           }
+
+           offerbtn.setOnClickListener {
+               findNavController().navigate(R.id.action_home_to_addOffer)
+           }
+       }
     }
 
     override fun onDestroyView() {

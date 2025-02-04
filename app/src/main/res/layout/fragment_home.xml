@@ -15,7 +15,7 @@
         android:layout_marginBottom="16dp"
         android:background="@color/green"
         android:clickable="true"
-        android:contentDescription="Add Item"
+        android:contentDescription="Add"
         android:src="@drawable/baseline_add_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -29,4 +29,32 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/offerbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:visibility="invisible"
+        android:contentDescription="Add Offers"
+        android:src="@drawable/discount"
+        android:backgroundTint="@color/light_green"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton2"
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButton2"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButton2" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/light_green"
+        android:clickable="true"
+        android:visibility="invisible"
+
+        android:src="@drawable/restaurant"
+        app:layout_constraintBottom_toTopOf="@+id/offerbtn"
+        app:layout_constraintEnd_toEndOf="@+id/offerbtn"
+        app:layout_constraintStart_toStartOf="@+id/offerbtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

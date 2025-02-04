@@ -13,6 +13,15 @@
         <action
             android:id="@+id/action_home_to_addProduct"
             app:destination="@id/addProduct" />
+        <action
+            android:id="@+id/action_home_to_addOffer"
+            app:destination="@id/addOffer" />
+        <action
+            android:id="@+id/action_home_to_updateProduct"
+            app:destination="@id/updateProduct" />
+        <argument
+            android:name="Product"
+            app:argType="com.example.grocerlypartners.model.Product" />
     </fragment>
     <fragment
         android:id="@+id/addProduct"
@@ -21,6 +30,24 @@
         tools:layout="@layout/fragment_add_product" >
         <action
             android:id="@+id/action_addProduct_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/addOffer"
+        android:name="com.example.grocerlypartners.fragments.AddOffer"
+        android:label="fragment_add_offer"
+        tools:layout="@layout/fragment_add_offer" >
+        <action
+            android:id="@+id/action_addOffer_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateProduct"
+        android:name="com.example.grocerlypartners.fragments.UpdateProduct"
+        android:label="fragment_update_product"
+        tools:layout="@layout/fragment_update_product" >
+        <action
+            android:id="@+id/action_updateProduct_to_home"
             app:destination="@id/home" />
     </fragment>
 </navigation>

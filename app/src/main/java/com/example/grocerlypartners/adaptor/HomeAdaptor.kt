@@ -17,6 +17,7 @@ class HomeAdaptor():RecyclerView.Adapter<HomeAdaptor.HomeViewHolder>() {
         fun bindProduct(product: Product){
             binding.product = product
             binding.executePendingBindings()
+
         }
     }
 
