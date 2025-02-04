@@ -1,6 +1,8 @@
 package com.example.grocerlypartners.viewmodel
 
 import android.app.Application
+import android.graphics.Bitmap
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.grocerlypartners.utils.Constants.PARTNERS
@@ -17,10 +19,15 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.consumeAsFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
+import java.io.File
+import java.io.FileOutputStream
+import java.util.UUID
 import javax.inject.Inject
 
 @HiltViewModel
@@ -101,6 +108,12 @@ class AddProductViewModel @Inject constructor(private val auth: FirebaseAuth,pri
         val isvalidated = validateProduct(product)
         return isvalidated is ProductValidation.success
     }
+
+     fun generateRandomImageName(): String {
+         return "IMG_${System.currentTimeMillis()}_${(1000..9999).random()}"
+    }
+
+
 
 
 }

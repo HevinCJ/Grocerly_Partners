@@ -5,6 +5,8 @@ plugins {
     id("com.google.dagger.hilt.android")
     alias(libs.plugins.google.gms.google.services)
     id("com.google.devtools.ksp")
+    id ("kotlin-parcelize")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -41,6 +43,7 @@ android {
         viewBinding = true
         dataBinding = true
     }
+
 }
 
 dependencies {
@@ -72,7 +75,15 @@ dependencies {
 
     //glide
     implementation(libs.glide)
-    ksp(libs.ksp)
+    ksp(libs.ksp.v4160)
+
+
+    //coil
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
+
+    //color picker
+    implementation(libs.colorpickerview)
 
 
 
