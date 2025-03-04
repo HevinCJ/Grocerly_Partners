@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -17,6 +18,7 @@ import com.example.grocerlypartners.dialogue.SetUpBottomDialogue
 import com.example.grocerlypartners.utils.NetworkResult
 import com.example.grocerlypartners.utils.RegisterValidation
 import com.example.grocerlypartners.viewmodel.LoginViewModel
+import com.example.grocerlypartners.viewmodel.SharedViewModel
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -27,6 +29,8 @@ class Login : Fragment() {
     private val binding get() = login!!
 
     private val loginViewModel: LoginViewModel by viewModels()
+
+    private val sharedViewModel by activityViewModels<SharedViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -72,7 +76,7 @@ class Login : Fragment() {
     private fun resetPasswordForPartner() {
         binding.apply {
             forgotpasswordtxtview.setOnClickListener{
-                SetUpBottomDialogue {email->
+                SetUpBottomDialogue(sharedViewModel){email->
                     loginViewModel.resetPassword(email)
                 }
             }
@@ -90,9 +94,14 @@ class Login : Fragment() {
     private fun loginPartnerToDb() {
         binding.apply {
            loginbtn.setOnClickListener{
-               val email = edttxtemail.text.toString().trim()
-               val password = edttxtpassword.text.toString().trim()
-               loginViewModel.loginPartnerToFirebase(email,password)
+               if (sharedViewModel.isNetworkAvailable(requireContext())){
+                   val email = edttxtemail.text.toString().trim()
+                   val password = edttxtpassword.text.toString().trim()
+                   loginViewModel.loginPartnerToFirebase(email,password)
+               }else{
+                   Toast.makeText(requireContext(),"Enable wifi/cellular",Toast.LENGTH_SHORT).show()
+               }
+
            }
         }
     }
@@ -113,7 +122,9 @@ class Login : Fragment() {
                        startActivity(intent)
                        requireActivity().finish()
                    }
-                   is NetworkResult.UnSpecified -> TODO()
+                   is NetworkResult.UnSpecified -> {
+
+                   }
                }
            }
        }
@@ -138,6 +149,11 @@ class Login : Fragment() {
                 }
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        login=null
     }
 
 }

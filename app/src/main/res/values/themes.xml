@@ -2,9 +2,30 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.GrocerlyPartners" parent="Theme.Material3.DayNight.NoActionBar">
 
-         <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimary">@color/green</item>
         <item name="colorPrimaryContainer">@color/green</item>
+        <item name="fontFamily">@font/custom_font</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/grey</item>
     </style>
 
+    <style name="TextInputErrorStyle" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">#FF0000</item> <!-- Red error color -->
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+
     <style name="Theme.GrocerlyPartners" parent="Base.Theme.GrocerlyPartners" />
+
+    <style name="CustomActiveIndicator">
+        <item name="android:background">@drawable/bottom_nav_item_background</item>
+    </style>
+
+
+
+
+
 </resources>
+
+

@@ -6,11 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.grocerlypartners.databinding.ProductHomeRclayoutBinding
+import com.example.grocerlypartners.model.OfferItem
 import com.example.grocerlypartners.model.Product
 
 class HomeAdaptor():RecyclerView.Adapter<HomeAdaptor.HomeViewHolder>() {
 
-    private var products:List<Product> = emptyList()
+    private var products: List<Product> = emptyList()
 
     inner class HomeViewHolder(private val binding: ProductHomeRclayoutBinding):ViewHolder(binding.root){
 
@@ -38,5 +39,28 @@ class HomeAdaptor():RecyclerView.Adapter<HomeAdaptor.HomeViewHolder>() {
         this.products = product
         notifyDataSetChanged()
         Log.d("isdatainrcview",product.toString())
+    }
+
+    fun getProduct(position: Int): Product {
+        return products[position]
+    }
+
+    fun removeProduct(position: Int){
+        if (position in products.indices){
+            products = products.toMutableList().apply { removeAt(position) }
+            notifyItemRemoved(position)
+            notifyItemRangeChanged(position,products.size)
+        }
+    }
+
+    fun addProduct(product: Product){
+        products = products.toMutableList().apply { add(product) }
+       val position = products.indexOf(product)
+        notifyItemInserted(position)
+        notifyItemRangeChanged(position,products.size)
+    }
+
+    fun getPosition(product: Product):Int{
+       return products.indexOf(product)
     }
 }

@@ -1,10 +1,19 @@
 package com.example.grocerlypartners.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+
+@Parcelize
 data class OfferItem(
-    val offerText: String,
+    val offerId:String,
     val offerImage: String,
-    val offerBgColor: Int,
+    val offerBgColor: String,
     val buttonText: String,
-    val buttonBgColor: Int,
-    val buttonTxtColor:Int
-)
+    val buttonBgColor: String,
+    val buttonTxtColor:String,
+    val descriptionText: String,
+    val descriptionTextColor: String
+):Parcelable{
+    constructor():this("","","","","","","","")
+}

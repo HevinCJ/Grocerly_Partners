@@ -4,7 +4,7 @@ import android.util.Patterns
 
 fun validateEmail(email: String): RegisterValidation{
 
-    if (email.isEmpty()) return RegisterValidation.Failure("No Email Found")
+    if (email.isEmpty()) return RegisterValidation.Failure("Required: Email cannot be empty")
 
     if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) return RegisterValidation.Failure("Invalid Email Format")
 
@@ -14,7 +14,7 @@ fun validateEmail(email: String): RegisterValidation{
 
 fun validatePassword(password: String): RegisterValidation{
 
-    if (password.isEmpty()) return RegisterValidation.Failure("Password cannot be empty")
+    if (password.isEmpty()) return RegisterValidation.Failure("Required:Password cannot be empty")
 
     if (password.length<6) return RegisterValidation.Failure("Password length must be 6 character")
 
@@ -23,9 +23,9 @@ fun validatePassword(password: String): RegisterValidation{
 }
 
 fun validateName(name: String): RegisterValidation{
-    if(name.isEmpty()) return RegisterValidation.Failure("Name cannot be empty")
+    if(name.isEmpty()) return RegisterValidation.Failure("Required:Name cannot be empty")
 
-    if(name.length<6) return RegisterValidation.Failure("Field Must contain 6 character")
+    if(name.length<5) return RegisterValidation.Failure("Name must contain 5 character")
 
     return RegisterValidation.Success()
 }

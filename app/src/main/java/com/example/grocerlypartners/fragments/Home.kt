@@ -1,6 +1,7 @@
 package com.example.grocerlypartners.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,13 +12,21 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.grocerlypartners.R
 import com.example.grocerlypartners.adaptor.HomeAdaptor
 import com.example.grocerlypartners.databinding.FragmentHomeBinding
+import com.example.grocerlypartners.model.Product
+import com.example.grocerlypartners.utils.LoadingDialogue
 import com.example.grocerlypartners.utils.NetworkResult
+import com.example.grocerlypartners.viewmodel.AddProductViewModel
 import com.example.grocerlypartners.viewmodel.HomeViewModel
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -27,7 +36,11 @@ class Home : Fragment() {
     private val binding get() = home!!
 
     private val homeViewModel by viewModels<HomeViewModel>()
+    private val addProductViewModel by viewModels<AddProductViewModel>()
+
     private val homeAdaptor by lazy { HomeAdaptor() }
+
+    private lateinit var loadingDialogue: LoadingDialogue
 
     private val rotateOpen:Animation by lazy { AnimationUtils.loadAnimation(requireContext(),R.anim.rotate_open_anim) }
     private val rotateClose:Animation by lazy { AnimationUtils.loadAnimation(requireContext(),R.anim.rotate_closed_anim) }
@@ -35,13 +48,23 @@ class Home : Fragment() {
     private val toBottom:Animation by lazy { AnimationUtils.loadAnimation(requireContext(),R.anim.to_bottom_anim) }
     private var isVisible = false
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        homeViewModel.fetchProductAddedByPartnerFromFirebase()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
        home = FragmentHomeBinding.inflate(inflater,container,false)
-        homeViewModel.fetchProductAddedByPartnerFromFirebase()
+        loadingDialogue = LoadingDialogue(requireContext())
         return binding.root
+    }
+
+    override fun onStart() {
+        super.onStart()
+        homeViewModel.fetchProductAddedByPartnerFromFirebase()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -49,6 +72,7 @@ class Home : Fragment() {
         actionToAddProductAndShowOffers()
         observeProductFetchFromFirebase()
         setRcViewForHomeAdaptor()
+        observeDeletedProduct()
     }
 
     private fun setRcViewForHomeAdaptor() {
@@ -58,26 +82,93 @@ class Home : Fragment() {
         }
     }
 
+    private fun observeDeletedProduct() {
+        homeViewModel.deleteProduct.observe(viewLifecycleOwner){result->
+            when(result){
+                is NetworkResult.Error -> {
+                    loadingDialogue.dismiss()
+                    Toast.makeText(requireContext(), "Failed to delete", Toast.LENGTH_SHORT).show()
+                }
+                is NetworkResult.Loading -> {
+                    loadingDialogue.show()
+                }
+                is NetworkResult.Success ->{
+                    loadingDialogue.dismiss()
+                    result.data?.let {
+                        homeViewModel.fetchProductAddedByPartnerFromFirebase()
+                        showSnackBar(it)
+                    }
+                }
+                is NetworkResult.UnSpecified -> {
+                    loadingDialogue.dismiss()
+                }
+            }
+        }
+    }
+
+    private fun showSnackBar(product: Product) {
+        Snackbar.make(requireView(),"Deleted ${product.itemName}",Snackbar.LENGTH_SHORT)
+            .setAction("Undo"){
+                addProductViewModel.uploadProductToFirebase(product)
+                addProductViewModel.uploadProduct.observe(viewLifecycleOwner){
+                    if (it is NetworkResult.Success){
+                        homeViewModel.fetchProductAddedByPartnerFromFirebase()
+                        loadingDialogue.dismiss()
+                    }
+                }
+
+            }.show()
+    }
+
+    private fun setSwipeToDelete(recyclerView: RecyclerView) {
+
+        val itemTouchHelperCallback = object : ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.RIGHT){
+            override fun onMove(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                target: RecyclerView.ViewHolder
+            ): Boolean {
+                return false
+            }
+
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                val position = viewHolder.adapterPosition
+                val offer = homeAdaptor.getProduct(position)
+                homeViewModel.deleteProduct(offer)
+            }
+
+
+        }
+
+        val itemTouchHelper = ItemTouchHelper(itemTouchHelperCallback)
+        itemTouchHelper.attachToRecyclerView(recyclerView)
+    }
+
     private fun observeProductFetchFromFirebase() {
-       lifecycleScope.launch {
-           homeViewModel.product.collect{result->
+           homeViewModel.product.observe(viewLifecycleOwner){result->
                when(result){
                    is NetworkResult.Error -> {
                        Toast.makeText(requireContext(),result.message, Toast.LENGTH_SHORT).show()
+                       loadingDialogue.dismiss()
+
                    }
                    is NetworkResult.Loading ->{
-                       Toast.makeText(requireContext(),"Loading,Please wait..", Toast.LENGTH_SHORT).show()
+                      loadingDialogue.show()
+
                    }
                    is NetworkResult.Success -> {
                        result.data?.let {
-                           homeAdaptor.setProduct(it)
+                           homeAdaptor.setProduct(it )
+                           setSwipeToDelete(binding.rcviewproducts)
                        }
-                   }
-                   is NetworkResult.UnSpecified -> {
+                       loadingDialogue.dismiss()
 
                    }
+                   is NetworkResult.UnSpecified -> {
+                       loadingDialogue.dismiss()
+                   }
                }
-           }
+
        }
 
     }
@@ -119,7 +210,7 @@ class Home : Fragment() {
                floatingActionButton2.startAnimation(rotateClose)
            }
            addProduct.setOnClickListener {
-               findNavController().navigate(R.id.action_home_to_addProduct)
+               findNavController().navigate(R.id.action_products_to_addProduct)
            }
 
            offerbtn.setOnClickListener {
@@ -132,6 +223,9 @@ class Home : Fragment() {
         super.onDestroyView()
         home = null
     }
+
+
+
 
 
 }
