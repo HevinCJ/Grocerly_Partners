@@ -14,9 +14,10 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ActionToUpdateProduct="@{product}"
+        ActionToUpdateProduct="@{product}"
         app:cardCornerRadius="8dp"
         app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/white"
         app:cardUseCompatPadding="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,7 +29,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:setImageToView="@{product.image}"
+                setImageToView="@{product.image}"
                 android:scaleType="fitXY"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -41,7 +42,8 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:textColor="@color/black"
-                android:fontFamily="@font/baloo_da_2_bold"
+                android:fontFamily="@font/custom_font"
+                android:textStyle="bold"
                 android:textSize="20sp"
                 android:text="@{product.itemName}"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +56,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:fontFamily="@font/baloo_da_2_semibold"
+                android:fontFamily="@font/custom_font"
+                android:textFontWeight="600"
                 android:textSize="20sp"
                 android:text="@{String.valueOf(product.itemPrice)}"
                 android:textColor="@color/black"
@@ -67,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
-                android:fontFamily="@font/baloo_da_2_medium"
+                android:fontFamily="@font/custom_font"
                 android:src="@drawable/rupee_indian"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView6"
@@ -81,9 +84,10 @@
                 android:layout_marginTop="16dp"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:fontFamily="@font/baloo_da_2_medium"
+                android:fontFamily="@font/custom_font"
+                android:textFontWeight="500"
                 tools:text="Fruits and Vegies"
-                android:parseCategoryIntoString="@{product.category}"
+                parseCategoryIntoString="@{product.category}"
                 app:layout_constraintStart_toStartOf="@+id/textView6"
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
 

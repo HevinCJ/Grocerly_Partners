@@ -1,55 +1,66 @@
 package com.example.grocerlypartners.viewmodel
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.grocerlypartners.utils.Constants.PARTNERS
-import com.example.grocerlypartners.utils.Constants.PRODUCTS
 import com.example.grocerlypartners.model.Product
+import com.example.grocerlypartners.repository.HomeRepoImpl
 import com.example.grocerlypartners.utils.NetworkResult
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.toObjects
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.cancel
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.asSharedFlow
-import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.conflate
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.tasks.await
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor (private val db:FirebaseFirestore, private val auth:FirebaseAuth, application: Application):AndroidViewModel(application) {
+class HomeViewModel @Inject constructor (private val homeRepoImpl: HomeRepoImpl, application: Application):AndroidViewModel(application) {
 
     private val _product = MutableStateFlow<NetworkResult<List<Product>>>(NetworkResult.UnSpecified())
-    val product:Flow<NetworkResult<List<Product>>> get() = _product.asStateFlow()
+    val product:LiveData<NetworkResult<List<Product>>> get() = _product.asLiveData()
+
+    private val _deleteProduct = MutableSharedFlow<NetworkResult<Product>>()
+    val deleteProduct:LiveData<NetworkResult<Product>> get() = _deleteProduct.asLiveData()
+
 
 
     fun fetchProductAddedByPartnerFromFirebase(){
       viewModelScope.launch {
-
-          _product.value = NetworkResult.Loading()
-
-         try {
-             val userId = auth.currentUser?.uid.toString()
-
-             val querySnapshot = db.collection(PARTNERS)
-                 .document(userId)
-                 .collection(PRODUCTS)
-                 .get()
-                 .await()
-
-             val productList = querySnapshot.toObjects(Product::class.java)
-             Log.d("productList",productList.toString())
-
-             _product.value = NetworkResult.Success(productList)
-
-         }catch (e:Exception){
-             _product.value = NetworkResult.Error(e.message)
-         }
+         fetchProductFromFirebase()
       }
+    }
+
+    private suspend fun fetchProductFromFirebase() {
+        _product.emit(NetworkResult.Loading())
+
+        homeRepoImpl.fetchDataFromFirebaseToHome().data?.let {
+            _product.emit(NetworkResult.Success(it))
+        }
+
+        homeRepoImpl.fetchDataFromFirebaseToHome().message?.let {
+            _product.emit(NetworkResult.Error(it))
+        }
+
+    }
+
+    fun deleteProduct(offer: Product) {
+        viewModelScope.launch {
+            deleteProductFromFirebase(offer)
+        }
+    }
+
+    private suspend fun deleteProductFromFirebase(product: Product) {
+        _deleteProduct.emit(NetworkResult.Loading())
+        val deleteProduct = homeRepoImpl.deleteDataFromFirebase(product)
+        _deleteProduct.emit(deleteProduct)
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        viewModelScope.cancel()
     }
 
 }

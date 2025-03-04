@@ -53,11 +53,10 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
 
     //auth
-    implementation(libs.firebase.auth)
+
 
     //daggerhilt
     implementation(libs.hilt.android)
-    implementation(libs.firebase.firestore)
     kapt(libs.hilt.android.compiler)
 
     //datastore
@@ -69,7 +68,8 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.savedstate)
 
     //firestore
-    implementation (libs.firebase.firestore.ktx)
+    implementation(libs.firebase.firestore)
+    implementation(libs.firebase.auth)
 
     
 

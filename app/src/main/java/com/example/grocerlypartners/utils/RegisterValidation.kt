@@ -6,10 +6,13 @@ sealed class RegisterValidation{
 }
 
 data class SignUpState(
-    val name: RegisterValidation,
+    val firstName: RegisterValidation,
+    val lastName: RegisterValidation,
     val email: RegisterValidation,
     val password: RegisterValidation
 )
+
+
 
 data class LoginState(
     val email: RegisterValidation,

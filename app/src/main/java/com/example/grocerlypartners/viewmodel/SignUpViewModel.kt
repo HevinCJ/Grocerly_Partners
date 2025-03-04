@@ -3,6 +3,7 @@ package com.example.grocerlypartners.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.grocerlypartners.model.Account
+import com.example.grocerlypartners.model.Product
 import com.example.grocerlypartners.utils.Constants.ACCOUNTS
 import com.example.grocerlypartners.utils.NetworkResult
 import com.example.grocerlypartners.utils.RegisterValidation
@@ -14,6 +15,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -33,37 +35,42 @@ class SignUpViewModel @Inject constructor(private val auth: FirebaseAuth,private
     val signUpState: Flow<SignUpState> get() = _signUpState.receiveAsFlow()
 
 
-    fun performSignUpForPartner(name: String,email: String,password: String){
+    fun performSignUpForPartner(firstName: String,lastName:String,email: String,password: String){
         viewModelScope.launch{
-            if (isValidated(name,email,password)){
-                performSignUp(name,email,password)
+            if (isValidated(firstName,lastName,email,password)){
+                performSignUp(firstName, lastName, email,password)
             }else{
-                emitValidationErrors(name,email,password)
+                emitValidationErrors(firstName,lastName,email,password)
             }
         }
     }
 
-    private fun isValidated(name:String,email: String,password: String): Boolean{
-        val isNameValidated = validateName(name)
+    private fun isValidated(firstName: String,lastName: String,email: String,password: String): Boolean{
+        val isFirstNameValidated = validateName(firstName)
+        val isLastNameValidated = validateName(lastName)
         val isEmailValidated = validateEmail(email)
         val isPasswordValidated = validatePassword(password)
 
-        val validationOk = isNameValidated is RegisterValidation.Success && isEmailValidated is RegisterValidation.Success && isPasswordValidated is RegisterValidation.Success
+        val validationOk = isFirstNameValidated is RegisterValidation.Success && isLastNameValidated is RegisterValidation.Success && isEmailValidated is RegisterValidation.Success && isPasswordValidated is RegisterValidation.Success
         return validationOk
     }
 
 
-    private suspend fun performSignUp(name: String,email: String,password: String){
+    private suspend fun performSignUp(firstName: String,lastName:String,email: String,password: String){
         try {
             _isSigned.emit(NetworkResult.Loading())
-
             val signedUser =  auth.createUserWithEmailAndPassword(email,password).await()
-            val user = signedUser.user
-            val isSaved = saveAccountToDb(Account(name,"",email,""))
 
-            if (user!=null && isSaved){
+            val userid = signedUser.user?.uid.toString()
 
-                _isSigned.emit(NetworkResult.Success(user))
+            if(userid.isEmpty()) return _isSigned.emit(NetworkResult.Error("Something went wrong,Please try later"))
+
+            val isSaved = saveAccountToDb(Account(userid,firstName,lastName,email,""))
+
+            if (isSaved){
+               signedUser.user?.let {
+                    _isSigned.emit(NetworkResult.Success(it))
+                }
 
             } else {
                 _isSigned.emit(NetworkResult.Error("Unable to SignIn , Please try later.."))
@@ -75,10 +82,9 @@ class SignUpViewModel @Inject constructor(private val auth: FirebaseAuth,private
     }
 
     private suspend fun saveAccountToDb(account: Account): Boolean {
-        val userId = auth.currentUser?.uid.toString()
         return try {
             db.collection(ACCOUNTS)
-                .document(userId)
+                .document(account.userId)
                 .set(account)
                 .await()
             true
@@ -87,9 +93,15 @@ class SignUpViewModel @Inject constructor(private val auth: FirebaseAuth,private
         }
     }
 
-    private suspend fun emitValidationErrors(name: String,email: String,password: String){
-        val signUpState = SignUpState(validateName(name),validateEmail(email),validatePassword(password))
+    private suspend fun emitValidationErrors(firstName: String,lastName: String,email: String,password: String){
+        val signUpState = SignUpState(validateName(firstName), validateName(lastName),validateEmail(email),validatePassword(password))
         _signUpState.send(signUpState)
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        viewModelScope.cancel()
+        _signUpState.close()
     }
 
 }

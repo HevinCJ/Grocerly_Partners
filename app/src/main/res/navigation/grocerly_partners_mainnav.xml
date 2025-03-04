@@ -3,43 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/grocerly_partners_mainnav"
-    app:startDestination="@id/home">
-
+    app:startDestination="@id/products">
     <fragment
-        android:id="@+id/home"
+        android:id="@+id/products"
         android:name="com.example.grocerlypartners.fragments.Home"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_home_to_addProduct"
-            app:destination="@id/addProduct" />
+            android:id="@+id/action_home_to_updateProduct"
+            app:destination="@id/updateProduct" />
         <action
             android:id="@+id/action_home_to_addOffer"
             app:destination="@id/addOffer" />
         <action
-            android:id="@+id/action_home_to_updateProduct"
-            app:destination="@id/updateProduct" />
-        <argument
-            android:name="Product"
-            app:argType="com.example.grocerlypartners.model.Product" />
+            android:id="@+id/action_products_to_addProduct"
+            app:destination="@id/addProduct" />
     </fragment>
     <fragment
-        android:id="@+id/addProduct"
-        android:name="com.example.grocerlypartners.fragments.AddProduct"
-        android:label="fragment_add_product"
-        tools:layout="@layout/fragment_add_product" >
+        android:id="@+id/offers"
+        android:name="com.example.grocerlypartners.fragments.Offers"
+        android:label="fragment_offers"
+        tools:layout="@layout/fragment_offers" >
         <action
-            android:id="@+id/action_addProduct_to_home"
-            app:destination="@id/home" />
+            android:id="@+id/action_offers_to_updateOffer"
+            app:destination="@id/updateOffer" />
     </fragment>
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.grocerlypartners.fragments.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+
     <fragment
         android:id="@+id/addOffer"
         android:name="com.example.grocerlypartners.fragments.AddOffer"
-        android:label="fragment_add_offer"
-        tools:layout="@layout/fragment_add_offer" >
+        android:label="AddOffer" >
         <action
-            android:id="@+id/action_addOffer_to_home"
-            app:destination="@id/home" />
+            android:id="@+id/action_addOffer_to_offers"
+            app:destination="@id/offers" />
     </fragment>
     <fragment
         android:id="@+id/updateProduct"
@@ -47,7 +48,31 @@
         android:label="fragment_update_product"
         tools:layout="@layout/fragment_update_product" >
         <action
-            android:id="@+id/action_updateProduct_to_home"
-            app:destination="@id/home" />
+            android:id="@+id/action_updateProduct_to_products"
+            app:destination="@id/products" />
+        <argument
+            android:name="product"
+            app:argType="com.example.grocerlypartners.model.Product" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateOffer"
+        android:name="com.example.grocerlypartners.fragments.UpdateOffer"
+        android:label="fragment_update_offer"
+        tools:layout="@layout/fragment_update_offer" >
+        <action
+            android:id="@+id/action_updateOffer_to_offers"
+            app:destination="@id/offers" />
+        <argument
+            android:name="offer"
+            app:argType="com.example.grocerlypartners.model.OfferItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/addProduct"
+        android:name="com.example.grocerlypartners.fragments.AddProduct"
+        android:label="fragment_add_product"
+        tools:layout="@layout/fragment_add_product" >
+        <action
+            android:id="@+id/action_addProduct_to_products"
+            app:destination="@id/products" />
     </fragment>
 </navigation>

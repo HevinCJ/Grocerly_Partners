@@ -15,6 +15,7 @@ import coil3.load
 import coil3.request.crossfade
 import com.bumptech.glide.Glide
 import com.example.grocerlypartners.fragments.HomeDirections
+import com.example.grocerlypartners.fragments.UpdateProductDirections
 import com.example.grocerlypartners.model.Product
 import com.example.grocerlypartners.utils.ProductCategory
 import java.io.File
@@ -22,7 +23,7 @@ import java.io.File
 object BindingAdaptors {
 
 
-    @BindingAdapter("android:parseCategoryIntoString")
+    @BindingAdapter("parseCategoryIntoString")
     @JvmStatic
     fun parseCategoryIntoString(view:TextView, category: ProductCategory){
         val categoryInString = convertCategoryIntoString(category)
@@ -44,7 +45,7 @@ object BindingAdaptors {
    }
 
 
-    @BindingAdapter("android:setImageToView")
+    @BindingAdapter("setImageToView")
     @JvmStatic
     fun setImageToView(view:ImageView,src:String){
 
@@ -59,11 +60,11 @@ object BindingAdaptors {
     }
 
 
-    @BindingAdapter("android:ActionToUpdateProduct")
+    @BindingAdapter("ActionToUpdateProduct")
     @JvmStatic
     fun ActionToUpdateProduct(view:CardView,product: Product){
         view.setOnClickListener {
-            val action = HomeDirections.actionHomeToUpdateProduct()
+            val action = HomeDirections.actionHomeToUpdateProduct(product)
             view.findNavController().navigate(action)
         }
     }

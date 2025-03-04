@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -13,6 +14,7 @@ import com.example.grocerlypartners.R
 import com.example.grocerlypartners.databinding.FragmentSignUpBinding
 import com.example.grocerlypartners.utils.NetworkResult
 import com.example.grocerlypartners.utils.RegisterValidation
+import com.example.grocerlypartners.viewmodel.SharedViewModel
 import com.example.grocerlypartners.viewmodel.SignUpViewModel
 import com.google.android.material.animation.AnimationUtils
 import dagger.hilt.android.AndroidEntryPoint
@@ -24,6 +26,8 @@ class SignUp : Fragment() {
     private val binding get() = signup!!
 
     private val signUpViewModel: SignUpViewModel by viewModels()
+
+    private val sharedViewModel:SharedViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,10 +48,15 @@ class SignUp : Fragment() {
     private fun performSignUp() {
         binding.apply {
           signupbtn.setOnClickListener{
-              val name = edttxtname.text.toString().trim()
-              val email = edttxtemail.text.toString().trim()
-              val password = edttxtpassword.text.toString().trim()
-              signUpViewModel.performSignUpForPartner(name,email,password)
+             if (sharedViewModel.isNetworkAvailable(requireContext())){
+                 val firstName = edttxtname.text.toString().trim()
+                 val lastName = edttxtlastname.text.toString().trim()
+                 val email = edttxtemail.text.toString().trim()
+                 val password = edttxtpassword.text.toString().trim()
+                 signUpViewModel.performSignUpForPartner(firstName,lastName,email,password)
+             }else{
+                 Toast.makeText(requireContext(),"Enable wifi/cellular",Toast.LENGTH_SHORT).show()
+             }
           }
         }
     }
@@ -58,16 +67,31 @@ class SignUp : Fragment() {
              when(result){
                  is NetworkResult.Error -> {
                      Toast.makeText(requireContext(),result.message, Toast.LENGTH_SHORT).show()
+                     binding.apply {
+                         progressbarsignin.visibility = View.INVISIBLE
+                         signupbtn.visibility = View.VISIBLE
+                     }
                  }
                  is NetworkResult.Loading -> {
-                     Toast.makeText(requireContext(),"Loading,Please wait..", Toast.LENGTH_SHORT).show()
-
+                     binding.apply {
+                         progressbarsignin.visibility = View.VISIBLE
+                         signupbtn.visibility = View.INVISIBLE
+                     }
                  }
                  is NetworkResult.Success -> {
                      findNavController().navigate(R.id.action_signUp_to_login)
                      Toast.makeText(requireContext(),"Signed In as ${result.data?.email}", Toast.LENGTH_SHORT).show()
+                     binding.apply {
+                         progressbarsignin.visibility = View.INVISIBLE
+                         signupbtn.visibility = View.VISIBLE
+                     }
                  }
-                 is NetworkResult.UnSpecified -> TODO()
+                 is NetworkResult.UnSpecified -> {
+                     binding.apply {
+                         progressbarsignin.visibility = View.INVISIBLE
+                         signupbtn.visibility = View.VISIBLE
+                     }
+                 }
              }
          }
      }
@@ -84,31 +108,49 @@ class SignUp : Fragment() {
     private fun observeSignUpUiState(){
         lifecycleScope.launch{
             signUpViewModel.signUpState.collect{state->
-                if (state.name is RegisterValidation.Failure){
-                    binding.edttxtname.apply {
+                if (state.firstName is RegisterValidation.Failure){
+                    binding.txtinputlayoutfirstname.apply {
                         requestFocus()
-                        error = state.name.message
+                        helperText = state.firstName.message
                     }
+                }else{
+                    binding.txtinputlayoutfirstname.helperText=null
+                }
+
+                if (state.lastName is RegisterValidation.Failure){
+                    binding.txtinputlayoutlastname.apply {
+                        requestFocus()
+                        helperText = state.lastName.message
+                    }
+                }else{
+                    binding.txtinputlayoutlastname.helperText=null
                 }
 
                 if (state.email is RegisterValidation.Failure){
-                    binding.edttxtemail.apply {
+                    binding.txtinputlayoutemail.apply {
                         requestFocus()
-                        error = state.email.message
+                        helperText = state.email.message
                     }
+                }else{
+                    binding.txtinputlayoutemail.helperText=null
                 }
 
                 if (state.password is RegisterValidation.Failure){
-                    binding.edttxtpassword.apply {
+                    binding.txtinputlayoutpassword.apply {
                         requestFocus()
-                        error = state.password.message
+                        helperText = state.password.message
                     }
+                }else{
+                    binding.txtinputlayoutpassword.helperText=null
                 }
 
             }
         }
     }
 
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+        signup=null
+    }
 
 }

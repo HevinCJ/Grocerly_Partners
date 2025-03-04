@@ -6,6 +6,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Product(
+    val productId:String,
     val image:String?,
     val itemName:String,
     val itemPrice:Int?,
@@ -13,5 +14,5 @@ data class Product(
     val itemRating:Double ?= 5.0,
     val totalRating:Int ?= 0
 ) : Parcelable {
-    constructor():this("","",null, ProductCategory.selectcatgory,null,null)
+    constructor():this("","","",null, ProductCategory.selectcatgory,null,null)
 }

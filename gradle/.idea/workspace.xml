@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7e1ae612-496d-45af-8a3e-00424eb866a0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/appInsightsSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/adaptor/OfferAdaptor.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/fragments/Offers.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/fragments/Settings.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/fragments/UpdateOffer.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/repository/AddOfferRepoImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/repository/AddProductRepoImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/repository/HomeRepoImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/repository/OfferRepoImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/repository/UpdateOfferRepoImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/repository/UpdateProductRepoImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/utils/FontUtils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/utils/LoadingDialogue.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/utils/OfferValidation.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/utils/OfferValidationChecker.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/viewmodel/AddOfferViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/viewmodel/OfferViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/viewmodel/UpdateOfferViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/viewmodel/UpdateProductViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/bottom_nav_item_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/bottom_nav_shape.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/box.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/custom_spinner_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/down_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/setting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/font/baloo_da_2.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/font/baloo_da_2_bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/font/baloo_da_2_medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/font/baloo_da_2_semibold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/font/custom_font.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/layout/custom_loading_screen.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_offers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_update_offer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/layout/offers_rc_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/res/menu/partnerbottomnavmenu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/google-services.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/activity/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/activity/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/adaptor/BindingAdaptors.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/adaptor/BindingAdaptors.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/adaptor/HomeAdaptor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/adaptor/HomeAdaptor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/application/GrocerlyPartnersApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/application/GrocerlyPartnersApp.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/di/FirebaseModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/di/FirebaseModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/fragments/AddOffer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/fragments/AddOffer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/fragments/AddProduct.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/fragments/AddProduct.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/fragments/Home.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/fragments/Home.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/fragments/Login.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/fragments/Login.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/fragments/SignUp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/fragments/SignUp.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/fragments/Splash.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/fragments/Splash.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/fragments/UpdateProduct.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/fragments/UpdateProduct.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/model/OfferItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/model/OfferItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/model/Product.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/model/Product.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/utils/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/utils/Constants.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/viewmodel/AddProductViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/viewmodel/AddProductViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/viewmodel/HomeViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/viewmodel/HomeViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/viewmodel/LoginViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/viewmodel/LoginViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/viewmodel/SignUpViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/grocerlypartners/viewmodel/SignUpViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/font/baloo_da_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/font/baloo_da_2_bold.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/font/baloo_da_2_medium.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/font/baloo_da_2_semibold.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_add_offer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_add_offer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_add_product.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_add_product.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_splash.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_update_product.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_update_product.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/product_home_rclayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/product_home_rclayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/navigation/grocerly_partners_mainnav.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/navigation/grocerly_partners_mainnav.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values-v23/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/values-v23/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/preloaded_fonts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/values/preloaded_fonts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../gradlew.bat" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "HevinCJ"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/HevinCJ/Grocerly_Partners.git",
+    "accountId": "0803ae0f-6e9a-4a9a-879f-6b5e6c11d319"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2tfEa0ILwVvgqJStAauCXEBJyus" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/hevincj/AndroidStudioProjects/GrocerlyPartners/gradle"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7e1ae612-496d-45af-8a3e-00424eb866a0" name="Changes" comment="" />
+      <created>1740734787442</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740734787442</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -38,9 +38,17 @@ class Splash : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Handler(Looper.getMainLooper()).postDelayed({
+
+        val isLoggedOut = requireActivity().intent.getBooleanExtra("skip_splash",false)
+
+        if (isLoggedOut){
             navigateToHome()
-        },3000)
+        }else{
+            Handler(Looper.getMainLooper()).postDelayed({
+                navigateToHome()
+            },3000)
+        }
+
     }
 
     private fun navigateToHome() {
@@ -58,6 +66,11 @@ class Splash : Fragment() {
                 }
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        splash=null
     }
 
 }
