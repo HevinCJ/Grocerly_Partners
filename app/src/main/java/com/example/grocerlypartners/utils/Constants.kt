@@ -6,6 +6,8 @@ object Constants {
     const val PARTNERS = "partners"
     const val PRODUCTS = "products"
     const val OFFERS = "offers"
+    const val ORDERS = "orders"
+    const val USERS = "users"
     const val PICK_IMAGE_REQUEST = 1
 
 }

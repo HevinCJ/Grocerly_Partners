@@ -64,7 +64,7 @@ object BindingAdaptors {
     @JvmStatic
     fun ActionToUpdateProduct(view:CardView,product: Product){
         view.setOnClickListener {
-            val action = HomeDirections.actionHomeToUpdateProduct(product)
+            val action = HomeDirections.actionProductsToUpdateProduct(product)
             view.findNavController().navigate(action)
         }
     }

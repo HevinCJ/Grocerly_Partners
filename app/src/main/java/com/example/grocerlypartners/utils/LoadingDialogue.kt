@@ -31,7 +31,7 @@ class LoadingDialogue(private val context: Context) {
 
             window?.apply {
                 setLayout(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT
                 )
                 setBackgroundDrawableResource(android.R.color.transparent)

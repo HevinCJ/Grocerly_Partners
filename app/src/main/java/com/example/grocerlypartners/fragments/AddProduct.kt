@@ -17,19 +17,24 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
+import com.bumptech.glide.Priority
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.grocerlypartners.R
 import com.example.grocerlypartners.databinding.FragmentAddProductBinding
 import com.example.grocerlypartners.utils.NetworkResult
 import com.example.grocerlypartners.model.Product
 import com.example.grocerlypartners.utils.Constants.PARTNERS
+import com.example.grocerlypartners.utils.LoadingDialogue
+import com.example.grocerlypartners.utils.NetworkUtils
 import com.example.grocerlypartners.utils.ProductCategory
 import com.example.grocerlypartners.utils.ProductValidation
 import com.example.grocerlypartners.viewmodel.AddProductViewModel
-import com.example.grocerlypartners.viewmodel.SharedViewModel
 import com.google.firebase.Firebase
 import com.google.firebase.app
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import java.io.File
 import java.io.FileOutputStream
@@ -44,16 +49,15 @@ class AddProduct : Fragment() {
     lateinit var db:FirebaseFirestore
 
     private val addProductViewModel: AddProductViewModel by viewModels()
-    private val sharedViewModel by viewModels<SharedViewModel>()
-
     private var selectedImage: String? = null
+
+    private lateinit var loadingDialogue: LoadingDialogue
 
     val galleryLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
         if (uri != null) {
             try {
-
-                selectedImage = uri.toString()
-                binding.imgviewitemimg.setImageURI(uri)
+                Log.d("imageurigot",uri.toString())
+                addProductViewModel.uploadImageToFirebase(uri)
 
             } catch (e: Exception) {
                 e.printStackTrace()
@@ -71,13 +75,12 @@ class AddProduct : Fragment() {
 
     }
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         addProduct = FragmentAddProductBinding.inflate(inflater, container, false)
+        loadingDialogue = LoadingDialogue(requireContext())
         return binding.root
     }
 
@@ -89,6 +92,42 @@ class AddProduct : Fragment() {
         getImageFromStorage()
         observeUploadState()
         observeProductValidationState()
+        observeImageUploadState()
+    }
+
+    private fun observeImageUploadState() {
+       lifecycleScope.launch {
+           addProductViewModel.uploadImageState.collectLatest {
+               when(it){
+                   is NetworkResult.Error<*> -> {
+                       Toast.makeText(requireContext(),it.message, Toast.LENGTH_SHORT).show()
+                       loadingDialogue.dismiss()
+                   }
+                   is NetworkResult.Loading<*> -> {
+                       loadingDialogue.show()
+                   }
+                   is NetworkResult.Success<*> -> {
+                       it.data?.let { image->
+                           loadPickedImage(image)
+                           selectedImage = image
+                       }
+                       loadingDialogue.dismiss()
+                   }
+                   is NetworkResult.UnSpecified<*> ->{
+                       loadingDialogue.dismiss()
+                   }
+               }
+           }
+       }
+    }
+
+    private fun loadPickedImage(url: String) {
+        Glide.with(requireContext())
+            .load(url)
+            .priority(Priority.HIGH)
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .into(binding.imgviewitemimg)
+
     }
 
     private fun observeProductValidationState() {
@@ -139,14 +178,13 @@ class AddProduct : Fragment() {
     private fun uploadDataToFirebase() {
         binding.apply {
             publishbtn.setOnClickListener {
-                if (sharedViewModel.isNetworkAvailable(requireContext())) {
+                if (NetworkUtils.isNetworkAvailable(requireContext())) {
                     val productKey = db.collection(PARTNERS).document().id
                     val itemname = edttextname.text.toString().trim()
                     val itemprice = edttextprice.text.toString().trim().toIntOrNull()
                     val imageuri = selectedImage
-                    val selectedItem =
-                        addProductViewModel.parseStringIntoProduct(CategorySpinner.selectedItem.toString())
-                    val product = Product(productKey, imageuri, itemname, itemprice, selectedItem)
+                    val selectedItem = addProductViewModel.parseStringIntoProduct(CategorySpinner.selectedItem.toString())
+                    val product = Product(productKey,"", imageuri, itemname, itemprice, selectedItem)
                     addProductViewModel.uploadProductToFirebase(product)
                 }else{
                     Toast.makeText(requireContext(),"Enable wifi/cellular",Toast.LENGTH_SHORT).show()
@@ -158,6 +196,7 @@ class AddProduct : Fragment() {
     private fun getImageFromStorage() {
         binding.apply {
             imgviewitemimg.setOnClickListener {
+                Log.d("imagepick", "Image picker launched ✅")
                 galleryLauncher.launch("image/*")
             }
         }

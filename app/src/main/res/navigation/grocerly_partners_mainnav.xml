@@ -9,15 +9,17 @@
         android:name="com.example.grocerlypartners.fragments.Home"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_home_to_updateProduct"
-            app:destination="@id/updateProduct" />
-        <action
-            android:id="@+id/action_home_to_addOffer"
-            app:destination="@id/addOffer" />
+
+
         <action
             android:id="@+id/action_products_to_addProduct"
             app:destination="@id/addProduct" />
+        <action
+            android:id="@+id/action_products_to_updateProduct"
+            app:destination="@id/updateProduct" />
+        <action
+            android:id="@+id/action_products_to_addOffer"
+            app:destination="@id/addOffer" />
     </fragment>
     <fragment
         android:id="@+id/offers"
@@ -32,7 +34,11 @@
         android:id="@+id/settings"
         android:name="com.example.grocerlypartners.fragments.Settings"
         android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings" >
+
+
+
+    </fragment>
 
     <fragment
         android:id="@+id/addOffer"
@@ -75,4 +81,36 @@
             android:id="@+id/action_addProduct_to_products"
             app:destination="@id/products" />
     </fragment>
+    <fragment
+        android:id="@+id/orders"
+        android:name="com.example.grocerlypartners.fragments.Orders"
+        android:label="fragment_orders"
+        tools:layout="@layout/fragment_orders" />
+    <fragment
+        android:id="@+id/business"
+        android:name="com.example.grocerlypartners.fragments.Business"
+        android:label="fragment_business"
+        tools:layout="@layout/fragment_business" />
+    <fragment
+        android:id="@+id/pending"
+        android:name="com.example.grocerlypartners.fragments.Pending"
+        android:label="fragment_pending"
+        tools:layout="@layout/fragment_pending" />
+    <fragment
+        android:id="@+id/accepted"
+        android:name="com.example.grocerlypartners.fragments.Accepted"
+        android:label="fragment_accepted"
+        tools:layout="@layout/fragment_accepted" />
+    <fragment
+        android:id="@+id/ready"
+        android:name="com.example.grocerlypartners.fragments.Ready"
+        android:label="fragment_ready"
+        tools:layout="@layout/fragment_ready" />
+    <fragment
+        android:id="@+id/shipped"
+        android:name="com.example.grocerlypartners.fragments.Shipped"
+        android:label="fragment_shipped"
+        tools:layout="@layout/fragment_shipped" />
+
+
 </navigation>

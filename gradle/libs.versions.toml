@@ -1,38 +1,46 @@
 [versions]
-agp = "8.8.1"
+agp = "8.11.1"
 coil = "2.7.0"
-coilNetworkOkhttp = "3.0.4"
+coilNetworkOkhttp = "3.3.0"
 colorpicker = "2.3"
 colorpickerVersion = "1.1.6’"
 colorpickerview = "2.3.0"
 compiler = "4.16.0"
-datastorePreferences = "1.1.1"
+datastorePreferences = "1.1.7"
 firebaseBom = "33.8.0"
-firebaseFirestoreKtx = "25.1.1"
+firebaseFirestoreKtx = "25.1.4"
+firebaseStorageKtx = "21.0.2"
 glide = "4.16.0"
-hiltAndroidCompiler = "2.51.1"
-kotlin = "2.0.0"
-coreKtx = "1.15.0"
+hiltAndroidCompiler = "2.57"
+kotlin = "2.2.0"
+coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
-appcompat = "1.7.0"
+appcompat = "1.7.1"
+kotlinxCoroutinesAndroid = "1.10.2"
 ksp = "4.16.0"
-lifecycleLivedataKtx = "2.8.7"
+lifecycleLivedataKtx = "2.9.2"
+lifecycleRuntimeKtx = "2.9.2"
 material = "1.12.0"
-activity = "1.9.3"
-constraintlayout = "2.2.0"
-navigationFragmentKtx = "2.8.5"
-navigationSafeArgsGradlePlugin = "2.8.6"
-navigationUiKtx = "2.8.5"
-googleGmsGoogleServices = "4.4.2"
-firebaseAuth = "23.1.0"
-firebaseFirestore = "25.1.1"
+activity = "1.10.1"
+constraintlayout = "2.2.1"
+navigationFragmentKtx = "2.9.3"
+navigationSafeArgsGradlePlugin = "2.9.3"
+navigationUiKtx = "2.9.3"
+googleGmsGoogleServices = "4.4.3"
+firebaseAuth = "24.0.0"
+firebaseFirestore = "26.0.0"
+navigationFragmentKtxVersion = "2.9.3"
+navigationUiKtxVersion = "2.9.3"
+fragment = "1.8.8"
+viewpager2 = "1.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
 androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleLivedataKtx" }
 androidx-lifecycle-viewmodel-savedstate = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "lifecycleLivedataKtx" }
 androidx-navigation-safe-args-gradle-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigationSafeArgsGradlePlugin" }
@@ -42,11 +50,10 @@ coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version
 coil3-coil = { module = "io.coil-kt.coil3:coil", version.ref = "coilNetworkOkhttp" }
 colorpicker = { module = "com.github.Dhaval2404:ColorPicker", version.ref = "colorpicker" }
 colorpickerview = { module = "com.github.skydoves:colorpickerview", version.ref = "colorpickerview" }
-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "compiler" }
 duanhong169-colorpicker = { module = "com.github.duanhong169:colorpicker", version.ref = "colorpickerVersion" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-firestore-ktx = { module = "com.google.firebase:firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
-firebase-storage = { module = "com.google.firebase:firebase-storage" }
+firebase-storage-ktx = { module = "com.google.firebase:firebase-storage-ktx", version.ref = "firebaseStorageKtx" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroidCompiler" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroidCompiler" }
@@ -54,6 +61,8 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesAndroid" }
 ksp = { module = "com.github.bumptech.glide:ksp", version.ref = "compiler" }
 ksp-v4160 = { module = "com.github.bumptech.glide:ksp", version.ref = "ksp" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
@@ -63,6 +72,10 @@ androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navi
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
+navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtxVersion" }
+navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtxVersion" }
+androidx-fragment = { group = "androidx.fragment", name = "fragment", version.ref = "fragment" }
+androidx-viewpager2 = { group = "androidx.viewpager2", name = "viewpager2", version.ref = "viewpager2" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

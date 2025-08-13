@@ -2,41 +2,59 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".activity.MainActivity">
+    android:background="@color/white">
+
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/partnermainFrgmntcontainerview"
+        android:id="@+id/fragmentContainerView"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:defaultNavHost="true"
-        app:layout_constraintBottom_toTopOf="@+id/btmnavgrocerly"
+        app:navGraph="@navigation/nav_root_graph"
+        app:layout_constraintBottom_toTopOf="@+id/coordinatorLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5"
-        app:navGraph="@navigation/grocerly_partners_mainnav" />
+        />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/btmnavgrocerly"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="3dp"
-        android:background="@drawable/bottom_nav_shape"
-        app:labelVisibilityMode="auto"
-        app:itemActiveIndicatorStyle="@drawable/bottom_nav_item_background"
-        app:itemIconTint="@drawable/bottom_nav_item_background"
-        app:itemTextColor="@drawable/bottom_nav_item_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/partnerbottomnavmenu" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/btmappbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/green"
+            app:fabAlignmentMode="center"
+            app:fabAnchorMode="cradle"
+            app:fabAnimationMode="scale"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="40dp"
+            app:fabCradleVerticalOffset="10dp" />
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/btmnavgrocerly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@android:color/transparent"
+            app:itemActiveIndicatorStyle="@drawable/bottom_nav_item_background"
+            app:itemIconTint="@drawable/bottom_nav_item_background"
+            app:itemTextColor="@drawable/bottom_nav_item_background"
+            app:labelVisibilityMode="auto"
+            app:menu="@menu/partnerbottomnavmenu" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

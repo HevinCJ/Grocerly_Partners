@@ -2,6 +2,8 @@ package com.example.grocerlypartners.viewmodel
 
 import android.app.Application
 import android.graphics.Bitmap
+import android.net.Uri
+import android.util.Log
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
@@ -26,6 +28,8 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.consumeAsFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
@@ -44,6 +48,9 @@ class AddProductViewModel @Inject constructor(private val addProductRepoImpl: Ad
     private val _productValState = Channel<productValidationState>()
     val productValState:Flow<productValidationState> get() = _productValState.receiveAsFlow()
 
+    private val _uploadImageState = MutableStateFlow<NetworkResult<String>>(NetworkResult.UnSpecified())
+    val uploadImageState: StateFlow<NetworkResult<String>> get() = _uploadImageState.asStateFlow()
+
 
 
     fun uploadProductToFirebase(product: Product){
@@ -51,6 +58,21 @@ class AddProductViewModel @Inject constructor(private val addProductRepoImpl: Ad
            insertDataIntoDb(product)
         }
     }
+
+    fun uploadImageToFirebase(uri:Uri){
+        viewModelScope.launch {
+            insertImageToFirebase(uri)
+        }
+    }
+
+    private suspend fun insertImageToFirebase(uri:Uri) {
+        _uploadImageState.emit(NetworkResult.Loading())
+        addProductRepoImpl.uploadImageToFirebase(uri).collectLatest {
+            _uploadImageState.emit(it)
+
+        }
+    }
+
 
     private suspend fun insertDataIntoDb(product: Product) {
         if (isProductValidated(product)){

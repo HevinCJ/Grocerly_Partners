@@ -1,6 +1,7 @@
 package com.example.grocerlypartners.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,11 +10,15 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
+import com.bumptech.glide.Priority
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.grocerlypartners.R
 import com.example.grocerlypartners.databinding.FragmentUpdateProductBinding
 import com.example.grocerlypartners.model.Product
@@ -26,6 +31,7 @@ import com.example.grocerlypartners.viewmodel.AddProductViewModel
 import com.example.grocerlypartners.viewmodel.UpdateProductViewModel
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -37,8 +43,8 @@ class UpdateProduct : Fragment() {
 
 
     private val updateNavArgs by navArgs<UpdateProductArgs>()
-    private lateinit var addProductViewModel:AddProductViewModel
-    private lateinit var updateProductViewModel: UpdateProductViewModel
+
+    private val updateProductViewModel: UpdateProductViewModel by viewModels()
 
     private lateinit var loadingDialogue: LoadingDialogue
 
@@ -46,14 +52,8 @@ class UpdateProduct : Fragment() {
 
     val galleryLauncher = registerForActivityResult(ActivityResultContracts.GetContent()){ uri->
         if (uri!=null){
-
-            selectedImage = uri.toString()
-            binding.imgviewitemimg.setImageURI(uri)
-        }else{
-
-            selectedImage = null
-            binding.imgviewitemimg.setImageDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.weebly_image_sample))
-
+            updateProductViewModel.uploadImageToFirebase(uri)
+            Log.d("imageurigot",uri.toString())
         }
 
     }
@@ -63,8 +63,6 @@ class UpdateProduct : Fragment() {
         savedInstanceState: Bundle?
     ): View {
        updateproduct = FragmentUpdateProductBinding.inflate(inflater,container,false)
-        addProductViewModel = ViewModelProvider(requireActivity())[AddProductViewModel::class.java]
-        updateProductViewModel = ViewModelProvider(requireActivity())[UpdateProductViewModel::class.java]
         loadingDialogue = LoadingDialogue(requireContext())
         return binding.root
     }
@@ -77,6 +75,7 @@ class UpdateProduct : Fragment() {
         getImageFromStorage()
         observeUpdatingProduct()
         observeUpdatingProductValidation()
+        observeImageUploadState()
     }
 
     private fun observeUpdatingProductValidation() {
@@ -87,6 +86,42 @@ class UpdateProduct : Fragment() {
                }
            }
        }
+    }
+
+    private fun observeImageUploadState() {
+        lifecycleScope.launch {
+            updateProductViewModel.uploadImageState.collectLatest {
+                when(it){
+                    is NetworkResult.Error<*> -> {
+                        Toast.makeText(requireContext(),it.message, Toast.LENGTH_SHORT).show()
+                        loadingDialogue.dismiss()
+                    }
+                    is NetworkResult.Loading<*> -> {
+                        loadingDialogue.show()
+                    }
+                    is NetworkResult.Success<*> -> {
+                        it.data?.let { image->
+                            loadPickedImage(image)
+                            selectedImage = image
+                        }
+                        loadingDialogue.dismiss()
+                    }
+                    is NetworkResult.UnSpecified<*> ->{
+                        loadingDialogue.dismiss()
+                    }
+                }
+            }
+        }
+    }
+
+
+    private fun loadPickedImage(url: String) {
+        Glide.with(requireContext())
+            .load(url)
+            .priority(Priority.HIGH)
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .into(binding.imgviewitemimg)
+
     }
 
     private fun observeUpdatingProduct() {
@@ -117,9 +152,9 @@ class UpdateProduct : Fragment() {
             updatebtn.setOnClickListener {
                 val itemName = edttextname.text.toString().trim()
                 val itemPrice = edttextprice.text.toString().trim().toIntOrNull()
-                val itemCategory = addProductViewModel.parseStringIntoProduct(CategorySpinner.selectedItem.toString())
+                val itemCategory = updateProductViewModel.parseStringIntoProduct(CategorySpinner.selectedItem.toString())
                 val itemImage  = selectedImage
-               val product = Product(updateNavArgs.product.productId,itemImage,itemName,itemPrice,itemCategory)
+               val product = Product(updateNavArgs.product.productId,updateNavArgs.product.partnerId,itemImage,itemName,itemPrice,itemCategory)
                 updateProductViewModel.updateDataIntoFirebase(product)
 
             }
@@ -133,7 +168,7 @@ class UpdateProduct : Fragment() {
             edttextprice.setText(product.itemPrice.toString())
             Glide.with(imgviewitemimg.context).load(product.image).placeholder(R.drawable.weebly_image_sample).into(imgviewitemimg)
             selectedImage = product.image
-            CategorySpinner.setSelection(addProductViewModel.parseProductIntoInt(product.category))
+            CategorySpinner.setSelection(updateProductViewModel.parseProductIntoInt(product.category))
         }
     }
 
@@ -152,6 +187,8 @@ class UpdateProduct : Fragment() {
             }
         }
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()

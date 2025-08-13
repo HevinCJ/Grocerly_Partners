@@ -8,13 +8,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.grocerlypartners.activity.LoginActivity
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavOptions
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
+import com.example.grocerlypartners.R
+import com.example.grocerlypartners.activity.MainActivity
 import com.example.grocerlypartners.databinding.FragmentSettingsBinding
 import com.example.grocerlypartners.utils.LoadingDialogue
 import com.example.grocerlypartners.utils.NetworkResult
 import com.example.grocerlypartners.viewmodel.SettingsViewModel
 import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -32,6 +39,7 @@ class Settings : Fragment() {
         savedInstanceState: Bundle?
     ): View {
        settings = FragmentSettingsBinding.inflate(inflater,container,false)
+        loadingDialogue = LoadingDialogue(requireContext())
         return binding.root
     }
 
@@ -39,31 +47,39 @@ class Settings : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setUpLogout()
         observeLogoutState()
-        loadingDialogue = LoadingDialogue(requireContext())
     }
 
     private fun observeLogoutState() {
-        settingsViewModel.logout.observe(viewLifecycleOwner){state->
-            when(state){
-                is NetworkResult.Error ->{
-                    loadingDialogue.dismiss()
-                }
-                is NetworkResult.Loading -> {
-                    loadingDialogue.show()
-                }
-                is NetworkResult.Success -> {
-                    val intent = Intent(requireActivity(),LoginActivity::class.java).apply {
-                        putExtra("skip_splash",true)
-                    }
-                    startActivity(intent)
-                    requireActivity().finish()
-                }
-                is NetworkResult.UnSpecified -> {
-                    loadingDialogue.dismiss()
-                }
-            }
-        }
+       viewLifecycleOwner.lifecycleScope.launch {
+           settingsViewModel.logout.collectLatest{state->
+               when(state){
+                   is NetworkResult.Error ->{
+                       loadingDialogue.dismiss()
+                   }
+                   is NetworkResult.Loading -> {
+                       loadingDialogue.show()
+                   }
+                   is NetworkResult.Success -> {
+                       loadingDialogue.dismiss()
+                       findNavController().setGraph(R.navigation.grocerly_partners_authnav)
+                      val intent =  Intent(requireContext(), MainActivity::class.java).apply {
+                           flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+                           putExtra("skip_splash",true)
+
+                       }
+                       startActivity(intent)
+                       requireActivity().finish()
+                   }
+                   is NetworkResult.UnSpecified -> {
+                       loadingDialogue.dismiss()
+                   }
+               }
+           }
+       }
+
+
     }
+
 
     private fun setUpLogout() {
         binding.apply {
@@ -80,6 +96,7 @@ class Settings : Fragment() {
             }
         }
     }
+
 
 
     override fun onDestroyView() {

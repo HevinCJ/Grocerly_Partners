@@ -10,6 +10,7 @@ import com.example.grocerlypartners.repository.HomeRepoImpl
 import com.example.grocerlypartners.utils.NetworkResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.cancel
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.conflate
@@ -25,6 +26,11 @@ class HomeViewModel @Inject constructor (private val homeRepoImpl: HomeRepoImpl,
     private val _deleteProduct = MutableSharedFlow<NetworkResult<Product>>()
     val deleteProduct:LiveData<NetworkResult<Product>> get() = _deleteProduct.asLiveData()
 
+    val isReady = !_product.value.data.isNullOrEmpty()
+
+    init {
+        fetchProductAddedByPartnerFromFirebase()
+    }
 
 
     fun fetchProductAddedByPartnerFromFirebase(){

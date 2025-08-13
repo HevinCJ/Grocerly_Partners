@@ -214,7 +214,7 @@ class Home : Fragment() {
            }
 
            offerbtn.setOnClickListener {
-               findNavController().navigate(R.id.action_home_to_addOffer)
+               findNavController().navigate(R.id.action_products_to_addOffer)
            }
        }
     }

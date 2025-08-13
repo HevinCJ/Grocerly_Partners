@@ -13,8 +13,8 @@ import androidx.navigation.fragment.findNavController
 import com.example.grocerlypartners.R
 import com.example.grocerlypartners.databinding.FragmentSignUpBinding
 import com.example.grocerlypartners.utils.NetworkResult
+import com.example.grocerlypartners.utils.NetworkUtils
 import com.example.grocerlypartners.utils.RegisterValidation
-import com.example.grocerlypartners.viewmodel.SharedViewModel
 import com.example.grocerlypartners.viewmodel.SignUpViewModel
 import com.google.android.material.animation.AnimationUtils
 import dagger.hilt.android.AndroidEntryPoint
@@ -27,7 +27,6 @@ class SignUp : Fragment() {
 
     private val signUpViewModel: SignUpViewModel by viewModels()
 
-    private val sharedViewModel:SharedViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,7 +47,7 @@ class SignUp : Fragment() {
     private fun performSignUp() {
         binding.apply {
           signupbtn.setOnClickListener{
-             if (sharedViewModel.isNetworkAvailable(requireContext())){
+             if (NetworkUtils.isNetworkAvailable(requireContext())){
                  val firstName = edttxtname.text.toString().trim()
                  val lastName = edttxtlastname.text.toString().trim()
                  val email = edttxtemail.text.toString().trim()

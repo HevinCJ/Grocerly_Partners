@@ -4,12 +4,12 @@ import android.util.Patterns
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.grocerlypartners.databinding.ResetPasswordLayoutBinding
-import com.example.grocerlypartners.viewmodel.SharedViewModel
+import com.example.grocerlypartners.utils.NetworkUtils
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.snackbar.Snackbar
 
-fun Fragment.SetUpBottomDialogue(sharedViewModel: SharedViewModel,onSend:(String)-> Unit){
+fun Fragment.SetUpBottomDialogue(onSend:(String)-> Unit){
 
     val bottomDialgue = BottomSheetDialog(requireContext())
 
@@ -19,7 +19,7 @@ fun Fragment.SetUpBottomDialogue(sharedViewModel: SharedViewModel,onSend:(String
     bottomDialgue.show()
     binding.apply {
         btnsend.setOnClickListener{
-           if (sharedViewModel.isNetworkAvailable(requireContext())){
+           if (NetworkUtils.isNetworkAvailable(requireContext())){
                val email = editTextTextEmailAddress.text.toString().trim()
 
                if (email.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()){

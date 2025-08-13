@@ -19,7 +19,10 @@ import kotlinx.coroutines.cancel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
@@ -28,8 +31,8 @@ import javax.inject.Inject
 @HiltViewModel
 class LoginViewModel @Inject constructor (private val auth: FirebaseAuth,application: Application): AndroidViewModel(application) {
 
-    private val _isloggedIn =MutableSharedFlow<NetworkResult<FirebaseUser>>()
-    val isloggedIn: Flow<NetworkResult<FirebaseUser>> get() = _isloggedIn.asSharedFlow()
+    private val _isloggedIn = MutableStateFlow<NetworkResult<FirebaseUser>>(NetworkResult.UnSpecified())
+    val isloggedIn: StateFlow<NetworkResult<FirebaseUser>> get() = _isloggedIn.asStateFlow()
 
     private val _isValidated = Channel<LoginState>()
     val isValidated: Flow<LoginState> get() = _isValidated.receiveAsFlow()
@@ -39,7 +42,7 @@ class LoginViewModel @Inject constructor (private val auth: FirebaseAuth,applica
 
     private val datastore = GrocerlyDataStore(application)
 
-    val loginState = datastore.getLoginState().asLiveData()
+    val loginState = datastore.getLoginState()
 
 
 

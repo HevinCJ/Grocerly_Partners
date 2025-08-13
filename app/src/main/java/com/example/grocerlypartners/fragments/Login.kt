@@ -10,17 +10,20 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.grocerlypartners.R
 import com.example.grocerlypartners.activity.MainActivity
 import com.example.grocerlypartners.databinding.FragmentLoginBinding
 import com.example.grocerlypartners.dialogue.SetUpBottomDialogue
+import com.example.grocerlypartners.preferences.GrocerlyDataStore
 import com.example.grocerlypartners.utils.NetworkResult
+import com.example.grocerlypartners.utils.NetworkUtils
 import com.example.grocerlypartners.utils.RegisterValidation
 import com.example.grocerlypartners.viewmodel.LoginViewModel
-import com.example.grocerlypartners.viewmodel.SharedViewModel
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -28,15 +31,15 @@ class Login : Fragment() {
     private var login: FragmentLoginBinding?=null
     private val binding get() = login!!
 
-    private val loginViewModel: LoginViewModel by viewModels()
+    private val loginViewModel: LoginViewModel by activityViewModels()
 
-    private val sharedViewModel by activityViewModels<SharedViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         login = FragmentLoginBinding.inflate(inflater,container,false)
+        (requireActivity() as MainActivity).setBottomNavVisibility(false)
         return binding.root
     }
 
@@ -60,6 +63,7 @@ class Login : Fragment() {
                    }
                    is NetworkResult.Loading -> {
 
+
                    }
                    is NetworkResult.Success -> {
                        Snackbar.make(requireView(),"Reset Link Sent to ${result.data}", Snackbar.LENGTH_SHORT).show()
@@ -76,7 +80,7 @@ class Login : Fragment() {
     private fun resetPasswordForPartner() {
         binding.apply {
             forgotpasswordtxtview.setOnClickListener{
-                SetUpBottomDialogue(sharedViewModel){email->
+                SetUpBottomDialogue(){email->
                     loginViewModel.resetPassword(email)
                 }
             }
@@ -94,7 +98,7 @@ class Login : Fragment() {
     private fun loginPartnerToDb() {
         binding.apply {
            loginbtn.setOnClickListener{
-               if (sharedViewModel.isNetworkAvailable(requireContext())){
+               if (NetworkUtils.isNetworkAvailable(requireContext())){
                    val email = edttxtemail.text.toString().trim()
                    val password = edttxtpassword.text.toString().trim()
                    loginViewModel.loginPartnerToFirebase(email,password)
@@ -108,8 +112,8 @@ class Login : Fragment() {
 
 
     private fun observeLoginState(){
-       lifecycleScope.launch{
-           loginViewModel.isloggedIn.collect{result->
+      lifecycleScope.launch{
+           loginViewModel.isloggedIn.collectLatest{result->
                when(result){
                    is NetworkResult.Error -> {
                        Toast.makeText(requireContext(),result.message,Toast.LENGTH_SHORT).show()
@@ -118,10 +122,9 @@ class Login : Fragment() {
                        Toast.makeText(requireContext(),"Loading,Please wait...",Toast.LENGTH_SHORT).show()
                    }
                    is NetworkResult.Success -> {
-                      val intent = Intent(requireContext(), MainActivity::class.java)
-                       startActivity(intent)
-                       requireActivity().finish()
+                       findNavController().navigate(R.id.action_login_to_mainnav)
                    }
+
                    is NetworkResult.UnSpecified -> {
 
                    }

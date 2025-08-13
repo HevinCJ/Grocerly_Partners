@@ -8,25 +8,37 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.grocerlypartners.R
 import com.example.grocerlypartners.activity.MainActivity
 import com.example.grocerlypartners.databinding.FragmentSplashBinding
+import com.example.grocerlypartners.preferences.GrocerlyDataStore
+import com.example.grocerlypartners.viewmodel.GraphViewModel
+import com.example.grocerlypartners.viewmodel.HomeViewModel
 import com.example.grocerlypartners.viewmodel.LoginViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.filterNotNull
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class Splash : Fragment() {
     private var splash:FragmentSplashBinding?=null
     private val binding get() = splash!!
 
-    private lateinit var loginViewModel:LoginViewModel
+    @Inject
+    lateinit var grocerlyDataStore: GrocerlyDataStore
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        loginViewModel = ViewModelProvider(requireActivity())[LoginViewModel::class.java]
-    }
+    private val  homeViewModel: HomeViewModel by viewModels()
+
+    private val graphViewModel: GraphViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,31 +51,28 @@ class Splash : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        if (savedInstanceState!=null) return
+
         val isLoggedOut = requireActivity().intent.getBooleanExtra("skip_splash",false)
 
-        if (isLoggedOut){
+        viewLifecycleOwner.lifecycleScope.launch {
+            if (!isLoggedOut) delay(3000)
             navigateToHome()
-        }else{
-            Handler(Looper.getMainLooper()).postDelayed({
-                navigateToHome()
-            },3000)
         }
 
     }
 
     private fun navigateToHome() {
-        val navOptions = NavOptions.Builder().setPopUpTo(R.id.splash,true).build()
-
-        loginViewModel.loginState.observe(viewLifecycleOwner){
-            when(it){
-                true ->{
-                    val intent = Intent(requireActivity(),MainActivity::class.java)
-                    startActivity(intent)
-                    requireActivity().finish()
-                }
-                false ->{
-                    findNavController().navigate(R.id.action_splash_to_login,null,navOptions)
-                }
+       viewLifecycleOwner.lifecycleScope.launch {
+          grocerlyDataStore.getLoginState().collectLatest { it ->
+              when(it){
+                  true -> {
+                      findNavController().navigate(R.id.action_splash_to_grocerly_partners_mainnav)
+                  }
+                  false ->{
+                      findNavController().navigate(R.id.action_splash_to_grocerly_partners_authnav)
+                  }
+              }
             }
         }
     }
