@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="gcm_defaultSenderId" translatable="false">703934017156</string>
-    <string name="google_api_key" translatable="false">AIzaSyDr_fjrRb9bsozI698dL8iI-1LNdTun7qk</string>
-    <string name="google_app_id" translatable="false">1:703934017156:android:fa690aea967468aa51dcd1</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDr_fjrRb9bsozI698dL8iI-1LNdTun7qk</string>
-    <string name="google_storage_bucket" translatable="false">grocerly-c5ad8.firebasestorage.app</string>
-    <string name="project_id" translatable="false">grocerly-c5ad8</string>
-</resources>
