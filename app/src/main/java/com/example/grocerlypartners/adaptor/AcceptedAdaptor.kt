@@ -74,6 +74,7 @@ class AcceptedAdaptor(
                     binding.txtvieworderidcancelled.text = order.orderId
                     materialcardviewcancelled.visibility = View.VISIBLE
                     materialCardView.visibility = View.INVISIBLE
+                
 
 
                     cancelleddeletebtn.setOnClickListener {
