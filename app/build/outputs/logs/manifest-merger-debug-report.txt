@@ -1,0 +1,865 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:2:1-71:12
+INJECTED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:2:1-71:12
+INJECTED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:2:1-71:12
+INJECTED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:2:1-71:12
+MERGED from [androidx.databinding:databinding-adapters:8.11.1] /Users/hevincj/.gradle/caches/8.13/transforms/722b1b009f20607fcc7ac4260aac94cf/transformed/databinding-adapters-8.11.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.databinding:databinding-ktx:8.11.1] /Users/hevincj/.gradle/caches/8.13/transforms/17fceb95a09bb6b139c5133040382a24/transformed/databinding-ktx-8.11.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.databinding:databinding-runtime:8.11.1] /Users/hevincj/.gradle/caches/8.13/transforms/31d6b3d3122848837f2124c4d4a12930/transformed/databinding-runtime-8.11.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.github.skydoves:colorpickerview:2.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/5ead317cd6aa7b726d4ebbc1e4f65a63/transformed/colorpickerview-2.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.databinding:viewbinding:8.11.1] /Users/hevincj/.gradle/caches/8.13/transforms/02e1d228f178d84492a8861e8e468350/transformed/viewbinding-8.11.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-firestore:26.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/614ffdf77d304cbee0949acf6541dbe4/transformed/firebase-firestore-26.0.0/AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:17:1-75:12
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/c8297e93f6d0e9a9692d7e18265c2da7/transformed/firebase-storage-ktx-21.0.2/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-storage:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/241d2bdcb84adbb80e99c35d13164429/transformed/firebase-storage-21.0.2/AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/e6b948072c554410b672597d15d8aa98/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-appcheck:17.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/2afd56ac8c146018a55e6785391b0f80/transformed/firebase-appcheck-17.1.0/AndroidManifest.xml:15:1-34:12
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/1eaf65c013ee305b24a36144e1042c24/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-common:22.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/3deb1801aa1e54dc4c53872cdc785d66/transformed/firebase-common-22.0.0/AndroidManifest.xml:15:1-41:12
+MERGED from [androidx.datastore:datastore-preferences-core-android:1.1.7] /Users/hevincj/.gradle/caches/8.13/transforms/6e935c2cf8ff19fcb1c02a658e2dccc3/transformed/datastore-preferences-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.7] /Users/hevincj/.gradle/caches/8.13/transforms/779fdba765e8b756d3d13dfa68b39421/transformed/datastore-preferences-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.datastore:datastore-android:1.1.7] /Users/hevincj/.gradle/caches/8.13/transforms/fd68ec173aaa1a7b2241388b0cc21b5e/transformed/datastore-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.datastore:datastore-core-android:1.1.7] /Users/hevincj/.gradle/caches/8.13/transforms/e4afd77946a9a2440948b58902870fa8/transformed/datastore-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.dagger:hilt-android:2.57] /Users/hevincj/.gradle/caches/8.13/transforms/577f95ec140a3ef49e2dbcd256ddb30e/transformed/hilt-android-2.57/AndroidManifest.xml:16:1-19:12
+MERGED from [androidx.navigation:navigation-runtime-android:2.9.3] /Users/hevincj/.gradle/caches/8.13/transforms/0567d8c952d10f298616792aa07ce3fe/transformed/navigation-runtime-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-android:2.9.3] /Users/hevincj/.gradle/caches/8.13/transforms/94fb5d5a03aa09e385267b4c4e404682/transformed/navigation-common-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-fragment:2.9.3] /Users/hevincj/.gradle/caches/8.13/transforms/922bf2b6b95091b74d5632a206548884/transformed/navigation-fragment-2.9.3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.9.3] /Users/hevincj/.gradle/caches/8.13/transforms/6b320b3bf486440a0590dc5d7b839f66/transformed/navigation-fragment-ktx-2.9.3/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-ui-ktx:2.9.3] /Users/hevincj/.gradle/caches/8.13/transforms/adf05df1b12e73b787edd03b77ebb80f/transformed/navigation-ui-ktx-2.9.3/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-ui:2.9.3] /Users/hevincj/.gradle/caches/8.13/transforms/fe9e92316e698b597be3027f5734c0e2/transformed/navigation-ui-2.9.3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.material:material:1.12.0] /Users/hevincj/.gradle/caches/8.13/transforms/6bb410edd57e4016cfced16b623a3558/transformed/material-1.12.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.3.1] /Users/hevincj/.gradle/caches/8.13/transforms/188380322b2bb60565f843d0cc5503ab/transformed/recyclerview-1.3.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/8c93ea9e2afbb7159266e851db32b46f/transformed/viewpager2-1.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.github.bumptech.glide:glide:4.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/d31203766806937136bcd0515e0a6d45/transformed/glide-4.16.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /Users/hevincj/.gradle/caches/8.13/transforms/63733329f9ca798a7711a3b2fecba16f/transformed/constraintlayout-2.2.1/AndroidManifest.xml:2:1-9:12
+MERGED from [io.coil-kt.coil3:coil-compose-android:3.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/8021939ba17dfa805b0bfc7cdf0d4766/transformed/coil-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt.coil3:coil-android:3.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/305896065c6c3dbddb76fd49a0877581/transformed/coil-release/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt.coil3:coil-compose-core-android:3.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/2d526126f89c32e4f0abf905439a1d92/transformed/coil-compose-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt.coil3:coil-network-core-android:3.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/49e0c8f184c9f15ba4d2b2b9d8271a8b/transformed/coil-network-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt.coil3:coil-core-android:3.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/3429d71adbae7ec80573fadb8423d8ee/transformed/coil-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat-resources:1.7.1] /Users/hevincj/.gradle/caches/8.13/transforms/1e63ee45f9fb93185b77534e14a3771f/transformed/appcompat-resources-1.7.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat:1.7.1] /Users/hevincj/.gradle/caches/8.13/transforms/2f1a7d103958ed37763850fecab60568/transformed/appcompat-1.7.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/hevincj/.gradle/caches/8.13/transforms/1a5ceaabeba04ce207a0c4664ce97100/transformed/firebase-database-collection-18.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.credentials:credentials:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/84c970ae4ea895e5d935d3794cdd6826/transformed/credentials-1.2.0-rc01/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:17:1-44:12
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /Users/hevincj/.gradle/caches/8.13/transforms/889e580798ac56b0e561cec45917dc5c/transformed/play-services-auth-20.7.0/AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/f979dad586da340d27d516bc0830b3d3/transformed/play-services-auth-api-phone-18.0.2/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/38623437c951c05a319122e67b607546/transformed/play-services-fido-20.1.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/f08227b23afad9eefdc953fc2803b919/transformed/firebase-appcheck-interop-17.1.0/AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/hevincj/.gradle/caches/8.13/transforms/e70a4da4d24e7b7cc98fe35bc60678e4/transformed/play-services-auth-base-18.0.4/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/865fd0914850196c62b273c683202707/transformed/play-services-base-18.1.0/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] /Users/hevincj/.gradle/caches/8.13/transforms/b4e9e87742ef0a29508cc554912a1186/transformed/recaptcha-18.6.1/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.play:integrity:1.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/0a474e7c6f9bfea6fed5014d2063810c/transformed/integrity-1.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/hevincj/.gradle/caches/8.13/transforms/caad43316003f3763e753fca2159ff86/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.5.0] /Users/hevincj/.gradle/caches/8.13/transforms/adca455ed2280b1da4e3555ab355909b/transformed/transition-1.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/557d33e4dfe9d381bd5426b945615874/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/b62d7fbf6b53c818a0dfbee1f4a8e9f6/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/efa2eab65aaef51d48e119a33b637874/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment-ktx:1.8.8] /Users/hevincj/.gradle/caches/8.13/transforms/7b476a95da9c781891d892f0a19854be/transformed/fragment-ktx-1.8.8/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.37.3] /Users/hevincj/.gradle/caches/8.13/transforms/52391f6d97cdd5006f0ed775486326ef/transformed/accompanist-drawablepainter-0.37.3/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.compose.animation:animation-core-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/646d23ccbf5fae1ab770c7cacba4c841/transformed/animation-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/01f479f6ee7b94959c284f1069567a85/transformed/animation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/6133dc1a7886d99d9a3e7571253675b8/transformed/foundation-layout-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/bb41e19318dcbed497e6245544b3a46b/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/82fb6a539693e878fb1d0d11f732e2fb/transformed/ui-unit-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/4171f823e714df19e4b57544add0e34d/transformed/ui-graphics-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/79f3d5d8bc42376ab527d784e92e8115/transformed/ui-geometry-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/2dc55a14114b37b8b286ae15e4408e6c/transformed/ui-util-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/33023ccc876e892ad296558f71099458/transformed/ui-text-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/05b774fa1cc482e3eff20412eb466097/transformed/ui-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-ktx:1.10.1] /Users/hevincj/.gradle/caches/8.13/transforms/3b2bb4b05e93696568077fb02a8b4fd0/transformed/activity-ktx-1.10.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.10.1] /Users/hevincj/.gradle/caches/8.13/transforms/6530ecd7a3ac3827b2796c691ebfc25f/transformed/activity-1.10.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/bdcfc1a76af7478792c2f5301d77a408/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.3.1] /Users/hevincj/.gradle/caches/8.13/transforms/9dbf17de1ed78b62186516219c0fdc6d/transformed/savedstate-ktx-1.3.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate:1.3.1] /Users/hevincj/.gradle/caches/8.13/transforms/04bf5dbf066ee5e04251158e9e4a38a5/transformed/savedstate-1.3.1/AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.savedstate:savedstate-android:1.3.1] /Users/hevincj/.gradle/caches/8.13/transforms/9a14fb7fbdf6bd1509909f2adbc38fcd/transformed/savedstate-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/5dfae0fcccd10526dfc20c35855f7246/transformed/core-ktx-1.16.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/74ed6ec64a429abfaca9233c3f31315f/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.browser:browser:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/664ae06b7f562857b48f1b87788605c2/transformed/browser-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1d5e0e2b8ad22d98f6f552417e75bdb/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/81dc89ae7c0cc9d2d7fe268d9ab196ce/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/02654bcab9c92aafe43839fe3d43c34a/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/55e8e5b3745f7f51b58c8ad375218939/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/5091ebef87521817e8b467fc502d1d3a/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/fbe20ee3310bcd7af5d261f85d2c1512/transformed/window-1.0.0/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/6f0bd7e8c4bb4c8145da69abd679be9d/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/eada1fd0ceede1d9df93ed73bd2f7816/transformed/emoji2-views-helper-1.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/63b5f83514be0c6650484ee69573af3e/transformed/emoji2-1.4.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/hevincj/.gradle/caches/8.13/transforms/97afcbef943dcb16e93228910b1e2a5e/transformed/graphics-path-1.0.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/cf553f4a9e352257fddf8e25185f8a66/transformed/core-1.16.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/a24a19f3ac1b01fa64a0092a61e0fe33/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/e3e29651ab09a331e3cdc006fad558ab/transformed/lifecycle-runtime-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/80be6f966b9229b5cc540da87e65c2bc/transformed/lifecycle-viewmodel-2.9.2/AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/8366e1f4a1dc14a878ff960a2023f85c/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/987fb6bf24b8799f8a4723fb98240f78/transformed/lifecycle-viewmodel-savedstate-2.9.2/AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/6c69a1287de579ca22506991e5d83875/transformed/lifecycle-viewmodel-savedstate-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/d109e0d0623c1739a71cdcc45ec4dd48/transformed/lifecycle-runtime-ktx/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/0797f80c79664b4d47d0083291880c1e/transformed/lifecycle-livedata-core-ktx-2.9.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/ce44e601f9bf6be964d416a7753464dd/transformed/lifecycle-service-2.9.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/4ef0d75ff99564f6845f6a654a8b1f09/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/682c63d769f8f45413c311f92ff16e14/transformed/lifecycle-livedata-core-2.9.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/e6211075ea01f99707a93363dacc913d/transformed/lifecycle-livedata-2.9.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/d0ac5b8c3044d1dc73d8275f124b365d/transformed/lifecycle-livedata-ktx-2.9.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/de066243bad60ec122f324c3af7511a7/transformed/lifecycle-viewmodel-ktx-2.9.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/fd74bfed4e71532819a4364d414bd262/transformed/runtime-saveable-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/0a5d735e87bb481cecb1da3e5e2f5a2d/transformed/runtime-release/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/hevincj/.gradle/caches/8.13/transforms/e7d67d02a93a14f842c3cdcb9105dffe/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/ce2ba1df79fba1adffcefbe95e9d7d85/transformed/play-services-basement-18.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.fragment:fragment:1.8.8] /Users/hevincj/.gradle/caches/8.13/transforms/5cc652e2b9e456a9c10bd646044336eb/transformed/fragment-1.8.8/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/a9eed3da6086c7a9588ad33a0135cfc8/transformed/googleid-1.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core-viewtree:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/5eb63790de22d161f67c71b556e5eea8/transformed/core-viewtree-1.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/2c11c0389e1b4bd6b8ac01af2d7a36b7/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-components:19.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/c9976c06e5591d480f3a5b19eb3633a1/transformed/firebase-components-19.0.0/AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/859a871a991d8bc7dcc3e60b50dfb660/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/4497835cbeba03f6d2ebcde84010c51b/transformed/gifdecoder-4.16.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/161336e1ef207d8ae8c452d59ca001cb/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/d28be152b09b234e2f69f3330d089004/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/hevincj/.gradle/caches/8.13/transforms/4ad4e3cbd8e124bcb1e80488a4d9f2cc/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hevincj/.gradle/caches/8.13/transforms/c4e54af7a8fcb8cf0ed9355646046c51/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/4fcb665f12fc9e1e85dd47711150937d/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/hevincj/.gradle/caches/8.13/transforms/8dd9a3b0e6d296733c8ba137dc65d9d5/transformed/tracing-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/hevincj/.gradle/caches/8.13/transforms/9c646d4b608d69ecb37b8fcc83a0de85/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/4e409c28e5965c31a42b6428d2c7df8c/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/2b13b8736eaee425aac05b4c87bb8ef5/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/1442cf9e892d5c91b4be07c2982ae4f1/transformed/exifinterface-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.dagger:dagger-lint-aar:2.57] /Users/hevincj/.gradle/caches/8.13/transforms/bb949c517e263eb0f629df55d88ad13d/transformed/dagger-lint-aar-2.57/AndroidManifest.xml:16:1-19:12
+MERGED from [io.grpc:grpc-android:1.62.2] /Users/hevincj/.gradle/caches/8.13/transforms/6a6d17e24fa1ba3683d31c28231154ce/transformed/grpc-android-1.62.2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.1] /Users/hevincj/.gradle/caches/8.13/transforms/8c6f6d501d929a2a4b08e6af6569c7c7/transformed/protolite-well-known-types-18.0.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.play:core-common:2.0.3] /Users/hevincj/.gradle/caches/8.13/transforms/eb9be31dcc681d5dd2077ddcd2ba7533/transformed/core-common-2.0.3/AndroidManifest.xml:2:1-21:12
+	package
+		INJECTED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:5:5-67
+MERGED from [com.google.firebase:firebase-firestore:26.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/614ffdf77d304cbee0949acf6541dbe4/transformed/firebase-firestore-26.0.0/AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-firestore:26.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/614ffdf77d304cbee0949acf6541dbe4/transformed/firebase-firestore-26.0.0/AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-storage:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/241d2bdcb84adbb80e99c35d13164429/transformed/firebase-storage-21.0.2/AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-storage:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/241d2bdcb84adbb80e99c35d13164429/transformed/firebase-storage-21.0.2/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] /Users/hevincj/.gradle/caches/8.13/transforms/b4e9e87742ef0a29508cc554912a1186/transformed/recaptcha-18.6.1/AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] /Users/hevincj/.gradle/caches/8.13/transforms/b4e9e87742ef0a29508cc554912a1186/transformed/recaptcha-18.6.1/AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:6:5-79
+MERGED from [com.google.firebase:firebase-firestore:26.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/614ffdf77d304cbee0949acf6541dbe4/transformed/firebase-firestore-26.0.0/AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-firestore:26.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/614ffdf77d304cbee0949acf6541dbe4/transformed/firebase-firestore-26.0.0/AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/241d2bdcb84adbb80e99c35d13164429/transformed/firebase-storage-21.0.2/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-storage:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/241d2bdcb84adbb80e99c35d13164429/transformed/firebase-storage-21.0.2/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] /Users/hevincj/.gradle/caches/8.13/transforms/b4e9e87742ef0a29508cc554912a1186/transformed/recaptcha-18.6.1/AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] /Users/hevincj/.gradle/caches/8.13/transforms/b4e9e87742ef0a29508cc554912a1186/transformed/recaptcha-18.6.1/AndroidManifest.xml:8:5-79
+MERGED from [io.grpc:grpc-android:1.62.2] /Users/hevincj/.gradle/caches/8.13/transforms/6a6d17e24fa1ba3683d31c28231154ce/transformed/grpc-android-1.62.2/AndroidManifest.xml:7:5-79
+MERGED from [io.grpc:grpc-android:1.62.2] /Users/hevincj/.gradle/caches/8.13/transforms/6a6d17e24fa1ba3683d31c28231154ce/transformed/grpc-android-1.62.2/AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:6:22-76
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:8:5-80
+	android:name
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:8:22-77
+uses-permission#android.permission.READ_MEDIA_IMAGES
+ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:9:5-76
+	android:name
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:9:22-73
+application
+ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:11:5-69:19
+INJECTED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:11:5-69:19
+MERGED from [com.google.firebase:firebase-firestore:26.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/614ffdf77d304cbee0949acf6541dbe4/transformed/firebase-firestore-26.0.0/AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:26.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/614ffdf77d304cbee0949acf6541dbe4/transformed/firebase-firestore-26.0.0/AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/c8297e93f6d0e9a9692d7e18265c2da7/transformed/firebase-storage-ktx-21.0.2/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/c8297e93f6d0e9a9692d7e18265c2da7/transformed/firebase-storage-ktx-21.0.2/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-storage:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/241d2bdcb84adbb80e99c35d13164429/transformed/firebase-storage-21.0.2/AndroidManifest.xml:26:5-37:19
+MERGED from [com.google.firebase:firebase-storage:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/241d2bdcb84adbb80e99c35d13164429/transformed/firebase-storage-21.0.2/AndroidManifest.xml:26:5-37:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/e6b948072c554410b672597d15d8aa98/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/e6b948072c554410b672597d15d8aa98/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/2afd56ac8c146018a55e6785391b0f80/transformed/firebase-appcheck-17.1.0/AndroidManifest.xml:21:5-32:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/2afd56ac8c146018a55e6785391b0f80/transformed/firebase-appcheck-17.1.0/AndroidManifest.xml:21:5-32:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/1eaf65c013ee305b24a36144e1042c24/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/1eaf65c013ee305b24a36144e1042c24/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common:22.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/3deb1801aa1e54dc4c53872cdc785d66/transformed/firebase-common-22.0.0/AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-common:22.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/3deb1801aa1e54dc4c53872cdc785d66/transformed/firebase-common-22.0.0/AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.android.material:material:1.12.0] /Users/hevincj/.gradle/caches/8.13/transforms/6bb410edd57e4016cfced16b623a3558/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.12.0] /Users/hevincj/.gradle/caches/8.13/transforms/6bb410edd57e4016cfced16b623a3558/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /Users/hevincj/.gradle/caches/8.13/transforms/63733329f9ca798a7711a3b2fecba16f/transformed/constraintlayout-2.2.1/AndroidManifest.xml:7:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /Users/hevincj/.gradle/caches/8.13/transforms/63733329f9ca798a7711a3b2fecba16f/transformed/constraintlayout-2.2.1/AndroidManifest.xml:7:5-20
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:23:5-42:19
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:23:5-42:19
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /Users/hevincj/.gradle/caches/8.13/transforms/889e580798ac56b0e561cec45917dc5c/transformed/play-services-auth-20.7.0/AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /Users/hevincj/.gradle/caches/8.13/transforms/889e580798ac56b0e561cec45917dc5c/transformed/play-services-auth-20.7.0/AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/38623437c951c05a319122e67b607546/transformed/play-services-fido-20.1.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/38623437c951c05a319122e67b607546/transformed/play-services-fido-20.1.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/f08227b23afad9eefdc953fc2803b919/transformed/firebase-appcheck-interop-17.1.0/AndroidManifest.xml:21:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/f08227b23afad9eefdc953fc2803b919/transformed/firebase-appcheck-interop-17.1.0/AndroidManifest.xml:21:5-20
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/865fd0914850196c62b273c683202707/transformed/play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/865fd0914850196c62b273c683202707/transformed/play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.play:integrity:1.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/0a474e7c6f9bfea6fed5014d2063810c/transformed/integrity-1.3.0/AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.android.play:integrity:1.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/0a474e7c6f9bfea6fed5014d2063810c/transformed/integrity-1.3.0/AndroidManifest.xml:5:5-6:19
+MERGED from [androidx.window:window:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/fbe20ee3310bcd7af5d261f85d2c1512/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/fbe20ee3310bcd7af5d261f85d2c1512/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/63b5f83514be0c6650484ee69573af3e/transformed/emoji2-1.4.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/63b5f83514be0c6650484ee69573af3e/transformed/emoji2-1.4.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/cf553f4a9e352257fddf8e25185f8a66/transformed/core-1.16.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/cf553f4a9e352257fddf8e25185f8a66/transformed/core-1.16.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/4ef0d75ff99564f6845f6a654a8b1f09/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/4ef0d75ff99564f6845f6a654a8b1f09/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/hevincj/.gradle/caches/8.13/transforms/e7d67d02a93a14f842c3cdcb9105dffe/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/hevincj/.gradle/caches/8.13/transforms/e7d67d02a93a14f842c3cdcb9105dffe/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/ce2ba1df79fba1adffcefbe95e9d7d85/transformed/play-services-basement-18.4.0/AndroidManifest.xml:5:5-7:19
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/ce2ba1df79fba1adffcefbe95e9d7d85/transformed/play-services-basement-18.4.0/AndroidManifest.xml:5:5-7:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hevincj/.gradle/caches/8.13/transforms/c4e54af7a8fcb8cf0ed9355646046c51/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hevincj/.gradle/caches/8.13/transforms/c4e54af7a8fcb8cf0ed9355646046c51/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/hevincj/.gradle/caches/8.13/transforms/9c646d4b608d69ecb37b8fcc83a0de85/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/hevincj/.gradle/caches/8.13/transforms/9c646d4b608d69ecb37b8fcc83a0de85/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.android.play:core-common:2.0.3] /Users/hevincj/.gradle/caches/8.13/transforms/eb9be31dcc681d5dd2077ddcd2ba7533/transformed/core-common-2.0.3/AndroidManifest.xml:11:5-19:19
+MERGED from [com.google.android.play:core-common:2.0.3] /Users/hevincj/.gradle/caches/8.13/transforms/eb9be31dcc681d5dd2077ddcd2ba7533/transformed/core-common-2.0.3/AndroidManifest.xml:11:5-19:19
+	android:extractNativeLibs
+		INJECTED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/cf553f4a9e352257fddf8e25185f8a66/transformed/core-1.16.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:19:9-35
+	android:label
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:17:9-41
+	android:fullBackupContent
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:15:9-54
+	android:roundIcon
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:18:9-54
+	tools:targetApi
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:21:9-29
+	android:icon
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:16:9-43
+	android:allowBackup
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:13:9-35
+	android:theme
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:20:9-54
+	android:dataExtractionRules
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:14:9-65
+	android:name
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:12:9-56
+activity#com.example.grocerlypartners.activity.MainActivity
+ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:24:9-64:20
+	android:windowSoftInputMode
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:27:13-55
+	android:exported
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:26:13-36
+	android:name
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:25:13-50
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:30:13-33:29
+action#android.intent.action.MAIN
+ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:31:17-69
+	android:name
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:31:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:32:17-77
+	android:name
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:32:27-74
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:grocerlymail.page.link+data:pathPrefix:/email-action+data:scheme:https
+ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:37:13-51:29
+	android:autoVerify
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:38:17-42
+action#android.intent.action.VIEW
+ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:39:17-69
+	android:name
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:39:25-66
+category#android.intent.category.DEFAULT
+ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:40:17-76
+	android:name
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:40:27-73
+category#android.intent.category.BROWSABLE
+ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:41:17-78
+	android:name
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:41:27-75
+data
+ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:43:17-47:23
+	android:path
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:61:21-45
+	android:host
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:45:21-58
+	android:scheme
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:44:21-43
+	android:pathPrefix
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:46:21-55
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:dev+data:path:/checkout+data:scheme:grocerly
+ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:53:13-62:29
+meta-data#preloaded_fonts
+ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:66:9-68:57
+	android:resource
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:68:13-54
+	android:name
+		ADDED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml:67:13-43
+uses-sdk
+INJECTED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml
+INJECTED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml
+MERGED from [androidx.databinding:databinding-adapters:8.11.1] /Users/hevincj/.gradle/caches/8.13/transforms/722b1b009f20607fcc7ac4260aac94cf/transformed/databinding-adapters-8.11.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:databinding-adapters:8.11.1] /Users/hevincj/.gradle/caches/8.13/transforms/722b1b009f20607fcc7ac4260aac94cf/transformed/databinding-adapters-8.11.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:databinding-ktx:8.11.1] /Users/hevincj/.gradle/caches/8.13/transforms/17fceb95a09bb6b139c5133040382a24/transformed/databinding-ktx-8.11.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:databinding-ktx:8.11.1] /Users/hevincj/.gradle/caches/8.13/transforms/17fceb95a09bb6b139c5133040382a24/transformed/databinding-ktx-8.11.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:databinding-runtime:8.11.1] /Users/hevincj/.gradle/caches/8.13/transforms/31d6b3d3122848837f2124c4d4a12930/transformed/databinding-runtime-8.11.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:databinding-runtime:8.11.1] /Users/hevincj/.gradle/caches/8.13/transforms/31d6b3d3122848837f2124c4d4a12930/transformed/databinding-runtime-8.11.1/AndroidManifest.xml:5:5-44
+MERGED from [com.github.skydoves:colorpickerview:2.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/5ead317cd6aa7b726d4ebbc1e4f65a63/transformed/colorpickerview-2.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.skydoves:colorpickerview:2.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/5ead317cd6aa7b726d4ebbc1e4f65a63/transformed/colorpickerview-2.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:viewbinding:8.11.1] /Users/hevincj/.gradle/caches/8.13/transforms/02e1d228f178d84492a8861e8e468350/transformed/viewbinding-8.11.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.11.1] /Users/hevincj/.gradle/caches/8.13/transforms/02e1d228f178d84492a8861e8e468350/transformed/viewbinding-8.11.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-firestore:26.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/614ffdf77d304cbee0949acf6541dbe4/transformed/firebase-firestore-26.0.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-firestore:26.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/614ffdf77d304cbee0949acf6541dbe4/transformed/firebase-firestore-26.0.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:21:5-23:151
+MERGED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:21:5-23:151
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/c8297e93f6d0e9a9692d7e18265c2da7/transformed/firebase-storage-ktx-21.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/c8297e93f6d0e9a9692d7e18265c2da7/transformed/firebase-storage-ktx-21.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-storage:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/241d2bdcb84adbb80e99c35d13164429/transformed/firebase-storage-21.0.2/AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-storage:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/241d2bdcb84adbb80e99c35d13164429/transformed/firebase-storage-21.0.2/AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/e6b948072c554410b672597d15d8aa98/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/e6b948072c554410b672597d15d8aa98/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-appcheck:17.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/2afd56ac8c146018a55e6785391b0f80/transformed/firebase-appcheck-17.1.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck:17.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/2afd56ac8c146018a55e6785391b0f80/transformed/firebase-appcheck-17.1.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/1eaf65c013ee305b24a36144e1042c24/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/1eaf65c013ee305b24a36144e1042c24/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:22.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/3deb1801aa1e54dc4c53872cdc785d66/transformed/firebase-common-22.0.0/AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-common:22.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/3deb1801aa1e54dc4c53872cdc785d66/transformed/firebase-common-22.0.0/AndroidManifest.xml:19:5-44
+MERGED from [androidx.datastore:datastore-preferences-core-android:1.1.7] /Users/hevincj/.gradle/caches/8.13/transforms/6e935c2cf8ff19fcb1c02a658e2dccc3/transformed/datastore-preferences-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-preferences-core-android:1.1.7] /Users/hevincj/.gradle/caches/8.13/transforms/6e935c2cf8ff19fcb1c02a658e2dccc3/transformed/datastore-preferences-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.7] /Users/hevincj/.gradle/caches/8.13/transforms/779fdba765e8b756d3d13dfa68b39421/transformed/datastore-preferences-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.7] /Users/hevincj/.gradle/caches/8.13/transforms/779fdba765e8b756d3d13dfa68b39421/transformed/datastore-preferences-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.7] /Users/hevincj/.gradle/caches/8.13/transforms/fd68ec173aaa1a7b2241388b0cc21b5e/transformed/datastore-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.7] /Users/hevincj/.gradle/caches/8.13/transforms/fd68ec173aaa1a7b2241388b0cc21b5e/transformed/datastore-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.7] /Users/hevincj/.gradle/caches/8.13/transforms/e4afd77946a9a2440948b58902870fa8/transformed/datastore-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.7] /Users/hevincj/.gradle/caches/8.13/transforms/e4afd77946a9a2440948b58902870fa8/transformed/datastore-core-release/AndroidManifest.xml:5:5-44
+MERGED from [com.google.dagger:hilt-android:2.57] /Users/hevincj/.gradle/caches/8.13/transforms/577f95ec140a3ef49e2dbcd256ddb30e/transformed/hilt-android-2.57/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.57] /Users/hevincj/.gradle/caches/8.13/transforms/577f95ec140a3ef49e2dbcd256ddb30e/transformed/hilt-android-2.57/AndroidManifest.xml:18:3-42
+MERGED from [androidx.navigation:navigation-runtime-android:2.9.3] /Users/hevincj/.gradle/caches/8.13/transforms/0567d8c952d10f298616792aa07ce3fe/transformed/navigation-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime-android:2.9.3] /Users/hevincj/.gradle/caches/8.13/transforms/0567d8c952d10f298616792aa07ce3fe/transformed/navigation-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-android:2.9.3] /Users/hevincj/.gradle/caches/8.13/transforms/94fb5d5a03aa09e385267b4c4e404682/transformed/navigation-common-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-android:2.9.3] /Users/hevincj/.gradle/caches/8.13/transforms/94fb5d5a03aa09e385267b4c4e404682/transformed/navigation-common-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.9.3] /Users/hevincj/.gradle/caches/8.13/transforms/922bf2b6b95091b74d5632a206548884/transformed/navigation-fragment-2.9.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.9.3] /Users/hevincj/.gradle/caches/8.13/transforms/922bf2b6b95091b74d5632a206548884/transformed/navigation-fragment-2.9.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.9.3] /Users/hevincj/.gradle/caches/8.13/transforms/6b320b3bf486440a0590dc5d7b839f66/transformed/navigation-fragment-ktx-2.9.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.9.3] /Users/hevincj/.gradle/caches/8.13/transforms/6b320b3bf486440a0590dc5d7b839f66/transformed/navigation-fragment-ktx-2.9.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-ui-ktx:2.9.3] /Users/hevincj/.gradle/caches/8.13/transforms/adf05df1b12e73b787edd03b77ebb80f/transformed/navigation-ui-ktx-2.9.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-ui-ktx:2.9.3] /Users/hevincj/.gradle/caches/8.13/transforms/adf05df1b12e73b787edd03b77ebb80f/transformed/navigation-ui-ktx-2.9.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-ui:2.9.3] /Users/hevincj/.gradle/caches/8.13/transforms/fe9e92316e698b597be3027f5734c0e2/transformed/navigation-ui-2.9.3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-ui:2.9.3] /Users/hevincj/.gradle/caches/8.13/transforms/fe9e92316e698b597be3027f5734c0e2/transformed/navigation-ui-2.9.3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.12.0] /Users/hevincj/.gradle/caches/8.13/transforms/6bb410edd57e4016cfced16b623a3558/transformed/material-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.12.0] /Users/hevincj/.gradle/caches/8.13/transforms/6bb410edd57e4016cfced16b623a3558/transformed/material-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.1] /Users/hevincj/.gradle/caches/8.13/transforms/188380322b2bb60565f843d0cc5503ab/transformed/recyclerview-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.1] /Users/hevincj/.gradle/caches/8.13/transforms/188380322b2bb60565f843d0cc5503ab/transformed/recyclerview-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/8c93ea9e2afbb7159266e851db32b46f/transformed/viewpager2-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/8c93ea9e2afbb7159266e851db32b46f/transformed/viewpager2-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.github.bumptech.glide:glide:4.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/d31203766806937136bcd0515e0a6d45/transformed/glide-4.16.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/d31203766806937136bcd0515e0a6d45/transformed/glide-4.16.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /Users/hevincj/.gradle/caches/8.13/transforms/63733329f9ca798a7711a3b2fecba16f/transformed/constraintlayout-2.2.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /Users/hevincj/.gradle/caches/8.13/transforms/63733329f9ca798a7711a3b2fecba16f/transformed/constraintlayout-2.2.1/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt.coil3:coil-compose-android:3.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/8021939ba17dfa805b0bfc7cdf0d4766/transformed/coil-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt.coil3:coil-compose-android:3.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/8021939ba17dfa805b0bfc7cdf0d4766/transformed/coil-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt.coil3:coil-android:3.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/305896065c6c3dbddb76fd49a0877581/transformed/coil-release/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt.coil3:coil-android:3.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/305896065c6c3dbddb76fd49a0877581/transformed/coil-release/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt.coil3:coil-compose-core-android:3.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/2d526126f89c32e4f0abf905439a1d92/transformed/coil-compose-core-release/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt.coil3:coil-compose-core-android:3.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/2d526126f89c32e4f0abf905439a1d92/transformed/coil-compose-core-release/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt.coil3:coil-network-core-android:3.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/49e0c8f184c9f15ba4d2b2b9d8271a8b/transformed/coil-network-core-release/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt.coil3:coil-network-core-android:3.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/49e0c8f184c9f15ba4d2b2b9d8271a8b/transformed/coil-network-core-release/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt.coil3:coil-core-android:3.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/3429d71adbae7ec80573fadb8423d8ee/transformed/coil-core-release/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt.coil3:coil-core-android:3.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/3429d71adbae7ec80573fadb8423d8ee/transformed/coil-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.1] /Users/hevincj/.gradle/caches/8.13/transforms/1e63ee45f9fb93185b77534e14a3771f/transformed/appcompat-resources-1.7.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.1] /Users/hevincj/.gradle/caches/8.13/transforms/1e63ee45f9fb93185b77534e14a3771f/transformed/appcompat-resources-1.7.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.1] /Users/hevincj/.gradle/caches/8.13/transforms/2f1a7d103958ed37763850fecab60568/transformed/appcompat-1.7.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.1] /Users/hevincj/.gradle/caches/8.13/transforms/2f1a7d103958ed37763850fecab60568/transformed/appcompat-1.7.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/hevincj/.gradle/caches/8.13/transforms/1a5ceaabeba04ce207a0c4664ce97100/transformed/firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/hevincj/.gradle/caches/8.13/transforms/1a5ceaabeba04ce207a0c4664ce97100/transformed/firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.credentials:credentials:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/84c970ae4ea895e5d935d3794cdd6826/transformed/credentials-1.2.0-rc01/AndroidManifest.xml:5:5-44
+MERGED from [androidx.credentials:credentials:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/84c970ae4ea895e5d935d3794cdd6826/transformed/credentials-1.2.0-rc01/AndroidManifest.xml:5:5-44
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:21:5-44
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:21:5-44
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /Users/hevincj/.gradle/caches/8.13/transforms/889e580798ac56b0e561cec45917dc5c/transformed/play-services-auth-20.7.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /Users/hevincj/.gradle/caches/8.13/transforms/889e580798ac56b0e561cec45917dc5c/transformed/play-services-auth-20.7.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/f979dad586da340d27d516bc0830b3d3/transformed/play-services-auth-api-phone-18.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/f979dad586da340d27d516bc0830b3d3/transformed/play-services-auth-api-phone-18.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/38623437c951c05a319122e67b607546/transformed/play-services-fido-20.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/38623437c951c05a319122e67b607546/transformed/play-services-fido-20.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/f08227b23afad9eefdc953fc2803b919/transformed/firebase-appcheck-interop-17.1.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/f08227b23afad9eefdc953fc2803b919/transformed/firebase-appcheck-interop-17.1.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/hevincj/.gradle/caches/8.13/transforms/e70a4da4d24e7b7cc98fe35bc60678e4/transformed/play-services-auth-base-18.0.4/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/hevincj/.gradle/caches/8.13/transforms/e70a4da4d24e7b7cc98fe35bc60678e4/transformed/play-services-auth-base-18.0.4/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/865fd0914850196c62b273c683202707/transformed/play-services-base-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/865fd0914850196c62b273c683202707/transformed/play-services-base-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] /Users/hevincj/.gradle/caches/8.13/transforms/b4e9e87742ef0a29508cc554912a1186/transformed/recaptcha-18.6.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] /Users/hevincj/.gradle/caches/8.13/transforms/b4e9e87742ef0a29508cc554912a1186/transformed/recaptcha-18.6.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.play:integrity:1.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/0a474e7c6f9bfea6fed5014d2063810c/transformed/integrity-1.3.0/AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.play:integrity:1.3.0] /Users/hevincj/.gradle/caches/8.13/transforms/0a474e7c6f9bfea6fed5014d2063810c/transformed/integrity-1.3.0/AndroidManifest.xml:4:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/hevincj/.gradle/caches/8.13/transforms/caad43316003f3763e753fca2159ff86/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/hevincj/.gradle/caches/8.13/transforms/caad43316003f3763e753fca2159ff86/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.5.0] /Users/hevincj/.gradle/caches/8.13/transforms/adca455ed2280b1da4e3555ab355909b/transformed/transition-1.5.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.transition:transition:1.5.0] /Users/hevincj/.gradle/caches/8.13/transforms/adca455ed2280b1da4e3555ab355909b/transformed/transition-1.5.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/557d33e4dfe9d381bd5426b945615874/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/557d33e4dfe9d381bd5426b945615874/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/b62d7fbf6b53c818a0dfbee1f4a8e9f6/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/b62d7fbf6b53c818a0dfbee1f4a8e9f6/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/efa2eab65aaef51d48e119a33b637874/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/efa2eab65aaef51d48e119a33b637874/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.8.8] /Users/hevincj/.gradle/caches/8.13/transforms/7b476a95da9c781891d892f0a19854be/transformed/fragment-ktx-1.8.8/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.8.8] /Users/hevincj/.gradle/caches/8.13/transforms/7b476a95da9c781891d892f0a19854be/transformed/fragment-ktx-1.8.8/AndroidManifest.xml:5:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.37.3] /Users/hevincj/.gradle/caches/8.13/transforms/52391f6d97cdd5006f0ed775486326ef/transformed/accompanist-drawablepainter-0.37.3/AndroidManifest.xml:21:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.37.3] /Users/hevincj/.gradle/caches/8.13/transforms/52391f6d97cdd5006f0ed775486326ef/transformed/accompanist-drawablepainter-0.37.3/AndroidManifest.xml:21:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/646d23ccbf5fae1ab770c7cacba4c841/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/646d23ccbf5fae1ab770c7cacba4c841/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/01f479f6ee7b94959c284f1069567a85/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/01f479f6ee7b94959c284f1069567a85/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/6133dc1a7886d99d9a3e7571253675b8/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/6133dc1a7886d99d9a3e7571253675b8/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/bb41e19318dcbed497e6245544b3a46b/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/bb41e19318dcbed497e6245544b3a46b/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/82fb6a539693e878fb1d0d11f732e2fb/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/82fb6a539693e878fb1d0d11f732e2fb/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/4171f823e714df19e4b57544add0e34d/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/4171f823e714df19e4b57544add0e34d/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/79f3d5d8bc42376ab527d784e92e8115/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/79f3d5d8bc42376ab527d784e92e8115/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/2dc55a14114b37b8b286ae15e4408e6c/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/2dc55a14114b37b8b286ae15e4408e6c/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/33023ccc876e892ad296558f71099458/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/33023ccc876e892ad296558f71099458/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/05b774fa1cc482e3eff20412eb466097/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/05b774fa1cc482e3eff20412eb466097/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.10.1] /Users/hevincj/.gradle/caches/8.13/transforms/3b2bb4b05e93696568077fb02a8b4fd0/transformed/activity-ktx-1.10.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.10.1] /Users/hevincj/.gradle/caches/8.13/transforms/3b2bb4b05e93696568077fb02a8b4fd0/transformed/activity-ktx-1.10.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.10.1] /Users/hevincj/.gradle/caches/8.13/transforms/6530ecd7a3ac3827b2796c691ebfc25f/transformed/activity-1.10.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.10.1] /Users/hevincj/.gradle/caches/8.13/transforms/6530ecd7a3ac3827b2796c691ebfc25f/transformed/activity-1.10.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/bdcfc1a76af7478792c2f5301d77a408/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/bdcfc1a76af7478792c2f5301d77a408/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.savedstate:savedstate-ktx:1.3.1] /Users/hevincj/.gradle/caches/8.13/transforms/9dbf17de1ed78b62186516219c0fdc6d/transformed/savedstate-ktx-1.3.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.3.1] /Users/hevincj/.gradle/caches/8.13/transforms/9dbf17de1ed78b62186516219c0fdc6d/transformed/savedstate-ktx-1.3.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate:1.3.1] /Users/hevincj/.gradle/caches/8.13/transforms/04bf5dbf066ee5e04251158e9e4a38a5/transformed/savedstate-1.3.1/AndroidManifest.xml:4:5-43
+MERGED from [androidx.savedstate:savedstate:1.3.1] /Users/hevincj/.gradle/caches/8.13/transforms/04bf5dbf066ee5e04251158e9e4a38a5/transformed/savedstate-1.3.1/AndroidManifest.xml:4:5-43
+MERGED from [androidx.savedstate:savedstate-android:1.3.1] /Users/hevincj/.gradle/caches/8.13/transforms/9a14fb7fbdf6bd1509909f2adbc38fcd/transformed/savedstate-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-android:1.3.1] /Users/hevincj/.gradle/caches/8.13/transforms/9a14fb7fbdf6bd1509909f2adbc38fcd/transformed/savedstate-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/5dfae0fcccd10526dfc20c35855f7246/transformed/core-ktx-1.16.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/5dfae0fcccd10526dfc20c35855f7246/transformed/core-ktx-1.16.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/74ed6ec64a429abfaca9233c3f31315f/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/74ed6ec64a429abfaca9233c3f31315f/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/664ae06b7f562857b48f1b87788605c2/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/664ae06b7f562857b48f1b87788605c2/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1d5e0e2b8ad22d98f6f552417e75bdb/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1d5e0e2b8ad22d98f6f552417e75bdb/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/81dc89ae7c0cc9d2d7fe268d9ab196ce/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/81dc89ae7c0cc9d2d7fe268d9ab196ce/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/02654bcab9c92aafe43839fe3d43c34a/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/02654bcab9c92aafe43839fe3d43c34a/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/55e8e5b3745f7f51b58c8ad375218939/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/55e8e5b3745f7f51b58c8ad375218939/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/5091ebef87521817e8b467fc502d1d3a/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/5091ebef87521817e8b467fc502d1d3a/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/fbe20ee3310bcd7af5d261f85d2c1512/transformed/window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/fbe20ee3310bcd7af5d261f85d2c1512/transformed/window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/6f0bd7e8c4bb4c8145da69abd679be9d/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/6f0bd7e8c4bb4c8145da69abd679be9d/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/eada1fd0ceede1d9df93ed73bd2f7816/transformed/emoji2-views-helper-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/eada1fd0ceede1d9df93ed73bd2f7816/transformed/emoji2-views-helper-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/63b5f83514be0c6650484ee69573af3e/transformed/emoji2-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/63b5f83514be0c6650484ee69573af3e/transformed/emoji2-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/hevincj/.gradle/caches/8.13/transforms/97afcbef943dcb16e93228910b1e2a5e/transformed/graphics-path-1.0.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/hevincj/.gradle/caches/8.13/transforms/97afcbef943dcb16e93228910b1e2a5e/transformed/graphics-path-1.0.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/cf553f4a9e352257fddf8e25185f8a66/transformed/core-1.16.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/cf553f4a9e352257fddf8e25185f8a66/transformed/core-1.16.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/a24a19f3ac1b01fa64a0092a61e0fe33/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/a24a19f3ac1b01fa64a0092a61e0fe33/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/e3e29651ab09a331e3cdc006fad558ab/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/e3e29651ab09a331e3cdc006fad558ab/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/80be6f966b9229b5cc540da87e65c2bc/transformed/lifecycle-viewmodel-2.9.2/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/80be6f966b9229b5cc540da87e65c2bc/transformed/lifecycle-viewmodel-2.9.2/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/8366e1f4a1dc14a878ff960a2023f85c/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/8366e1f4a1dc14a878ff960a2023f85c/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/987fb6bf24b8799f8a4723fb98240f78/transformed/lifecycle-viewmodel-savedstate-2.9.2/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/987fb6bf24b8799f8a4723fb98240f78/transformed/lifecycle-viewmodel-savedstate-2.9.2/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/6c69a1287de579ca22506991e5d83875/transformed/lifecycle-viewmodel-savedstate-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/6c69a1287de579ca22506991e5d83875/transformed/lifecycle-viewmodel-savedstate-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/d109e0d0623c1739a71cdcc45ec4dd48/transformed/lifecycle-runtime-ktx/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/d109e0d0623c1739a71cdcc45ec4dd48/transformed/lifecycle-runtime-ktx/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/0797f80c79664b4d47d0083291880c1e/transformed/lifecycle-livedata-core-ktx-2.9.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/0797f80c79664b4d47d0083291880c1e/transformed/lifecycle-livedata-core-ktx-2.9.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/ce44e601f9bf6be964d416a7753464dd/transformed/lifecycle-service-2.9.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/ce44e601f9bf6be964d416a7753464dd/transformed/lifecycle-service-2.9.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/4ef0d75ff99564f6845f6a654a8b1f09/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/4ef0d75ff99564f6845f6a654a8b1f09/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/682c63d769f8f45413c311f92ff16e14/transformed/lifecycle-livedata-core-2.9.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/682c63d769f8f45413c311f92ff16e14/transformed/lifecycle-livedata-core-2.9.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/e6211075ea01f99707a93363dacc913d/transformed/lifecycle-livedata-2.9.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/e6211075ea01f99707a93363dacc913d/transformed/lifecycle-livedata-2.9.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/d0ac5b8c3044d1dc73d8275f124b365d/transformed/lifecycle-livedata-ktx-2.9.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/d0ac5b8c3044d1dc73d8275f124b365d/transformed/lifecycle-livedata-ktx-2.9.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/de066243bad60ec122f324c3af7511a7/transformed/lifecycle-viewmodel-ktx-2.9.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/de066243bad60ec122f324c3af7511a7/transformed/lifecycle-viewmodel-ktx-2.9.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/fd74bfed4e71532819a4364d414bd262/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/fd74bfed4e71532819a4364d414bd262/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/0a5d735e87bb481cecb1da3e5e2f5a2d/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.8.2] /Users/hevincj/.gradle/caches/8.13/transforms/0a5d735e87bb481cecb1da3e5e2f5a2d/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/hevincj/.gradle/caches/8.13/transforms/e7d67d02a93a14f842c3cdcb9105dffe/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/hevincj/.gradle/caches/8.13/transforms/e7d67d02a93a14f842c3cdcb9105dffe/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/ce2ba1df79fba1adffcefbe95e9d7d85/transformed/play-services-basement-18.4.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/ce2ba1df79fba1adffcefbe95e9d7d85/transformed/play-services-basement-18.4.0/AndroidManifest.xml:3:5-44
+MERGED from [androidx.fragment:fragment:1.8.8] /Users/hevincj/.gradle/caches/8.13/transforms/5cc652e2b9e456a9c10bd646044336eb/transformed/fragment-1.8.8/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.8.8] /Users/hevincj/.gradle/caches/8.13/transforms/5cc652e2b9e456a9c10bd646044336eb/transformed/fragment-1.8.8/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/a9eed3da6086c7a9588ad33a0135cfc8/transformed/googleid-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/a9eed3da6086c7a9588ad33a0135cfc8/transformed/googleid-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/5eb63790de22d161f67c71b556e5eea8/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/5eb63790de22d161f67c71b556e5eea8/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/2c11c0389e1b4bd6b8ac01af2d7a36b7/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/2c11c0389e1b4bd6b8ac01af2d7a36b7/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-components:19.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/c9976c06e5591d480f3a5b19eb3633a1/transformed/firebase-components-19.0.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-components:19.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/c9976c06e5591d480f3a5b19eb3633a1/transformed/firebase-components-19.0.0/AndroidManifest.xml:18:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/859a871a991d8bc7dcc3e60b50dfb660/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/859a871a991d8bc7dcc3e60b50dfb660/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/4497835cbeba03f6d2ebcde84010c51b/transformed/gifdecoder-4.16.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/4497835cbeba03f6d2ebcde84010c51b/transformed/gifdecoder-4.16.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/161336e1ef207d8ae8c452d59ca001cb/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/161336e1ef207d8ae8c452d59ca001cb/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/d28be152b09b234e2f69f3330d089004/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/d28be152b09b234e2f69f3330d089004/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/hevincj/.gradle/caches/8.13/transforms/4ad4e3cbd8e124bcb1e80488a4d9f2cc/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/hevincj/.gradle/caches/8.13/transforms/4ad4e3cbd8e124bcb1e80488a4d9f2cc/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hevincj/.gradle/caches/8.13/transforms/c4e54af7a8fcb8cf0ed9355646046c51/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hevincj/.gradle/caches/8.13/transforms/c4e54af7a8fcb8cf0ed9355646046c51/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/4fcb665f12fc9e1e85dd47711150937d/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/4fcb665f12fc9e1e85dd47711150937d/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/hevincj/.gradle/caches/8.13/transforms/8dd9a3b0e6d296733c8ba137dc65d9d5/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/hevincj/.gradle/caches/8.13/transforms/8dd9a3b0e6d296733c8ba137dc65d9d5/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/hevincj/.gradle/caches/8.13/transforms/9c646d4b608d69ecb37b8fcc83a0de85/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/hevincj/.gradle/caches/8.13/transforms/9c646d4b608d69ecb37b8fcc83a0de85/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/4e409c28e5965c31a42b6428d2c7df8c/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/4e409c28e5965c31a42b6428d2c7df8c/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/2b13b8736eaee425aac05b4c87bb8ef5/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/2b13b8736eaee425aac05b4c87bb8ef5/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/1442cf9e892d5c91b4be07c2982ae4f1/transformed/exifinterface-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/1442cf9e892d5c91b4be07c2982ae4f1/transformed/exifinterface-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.dagger:dagger-lint-aar:2.57] /Users/hevincj/.gradle/caches/8.13/transforms/bb949c517e263eb0f629df55d88ad13d/transformed/dagger-lint-aar-2.57/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.57] /Users/hevincj/.gradle/caches/8.13/transforms/bb949c517e263eb0f629df55d88ad13d/transformed/dagger-lint-aar-2.57/AndroidManifest.xml:18:3-42
+MERGED from [io.grpc:grpc-android:1.62.2] /Users/hevincj/.gradle/caches/8.13/transforms/6a6d17e24fa1ba3683d31c28231154ce/transformed/grpc-android-1.62.2/AndroidManifest.xml:5:5-44
+MERGED from [io.grpc:grpc-android:1.62.2] /Users/hevincj/.gradle/caches/8.13/transforms/6a6d17e24fa1ba3683d31c28231154ce/transformed/grpc-android-1.62.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.1] /Users/hevincj/.gradle/caches/8.13/transforms/8c6f6d501d929a2a4b08e6af6569c7c7/transformed/protolite-well-known-types-18.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.1] /Users/hevincj/.gradle/caches/8.13/transforms/8c6f6d501d929a2a4b08e6af6569c7c7/transformed/protolite-well-known-types-18.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.play:core-common:2.0.3] /Users/hevincj/.gradle/caches/8.13/transforms/eb9be31dcc681d5dd2077ddcd2ba7533/transformed/core-common-2.0.3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.play:core-common:2.0.3] /Users/hevincj/.gradle/caches/8.13/transforms/eb9be31dcc681d5dd2077ddcd2ba7533/transformed/core-common-2.0.3/AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:23:9-148
+	android:targetSdkVersion
+		INJECTED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/hevincj/AndroidStudioProjects/GrocerlyPartners/app/src/main/AndroidManifest.xml
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-firestore:26.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/614ffdf77d304cbee0949acf6541dbe4/transformed/firebase-firestore-26.0.0/AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/c8297e93f6d0e9a9692d7e18265c2da7/transformed/firebase-storage-ktx-21.0.2/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/c8297e93f6d0e9a9692d7e18265c2da7/transformed/firebase-storage-ktx-21.0.2/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-storage:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/241d2bdcb84adbb80e99c35d13164429/transformed/firebase-storage-21.0.2/AndroidManifest.xml:27:9-36:19
+MERGED from [com.google.firebase:firebase-storage:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/241d2bdcb84adbb80e99c35d13164429/transformed/firebase-storage-21.0.2/AndroidManifest.xml:27:9-36:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/2afd56ac8c146018a55e6785391b0f80/transformed/firebase-appcheck-17.1.0/AndroidManifest.xml:22:9-31:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/2afd56ac8c146018a55e6785391b0f80/transformed/firebase-appcheck-17.1.0/AndroidManifest.xml:22:9-31:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/1eaf65c013ee305b24a36144e1042c24/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/1eaf65c013ee305b24a36144e1042c24/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common:22.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/3deb1801aa1e54dc4c53872cdc785d66/transformed/firebase-common-22.0.0/AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-common:22.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/3deb1801aa1e54dc4c53872cdc785d66/transformed/firebase-common-22.0.0/AndroidManifest.xml:30:9-38:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-firestore:26.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/614ffdf77d304cbee0949acf6541dbe4/transformed/firebase-firestore-26.0.0/AndroidManifest.xml:16:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:22.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/3deb1801aa1e54dc4c53872cdc785d66/transformed/firebase-common-22.0.0/AndroidManifest.xml:34:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:22.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/3deb1801aa1e54dc4c53872cdc785d66/transformed/firebase-common-22.0.0/AndroidManifest.xml:32:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:26.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/614ffdf77d304cbee0949acf6541dbe4/transformed/firebase-firestore-26.0.0/AndroidManifest.xml:15:13-84
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar
+ADDED from [com.google.firebase:firebase-firestore:26.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/614ffdf77d304cbee0949acf6541dbe4/transformed/firebase-firestore-26.0.0/AndroidManifest.xml:17:13-19:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:26.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/614ffdf77d304cbee0949acf6541dbe4/transformed/firebase-firestore-26.0.0/AndroidManifest.xml:19:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:26.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/614ffdf77d304cbee0949acf6541dbe4/transformed/firebase-firestore-26.0.0/AndroidManifest.xml:18:17-122
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:26.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/614ffdf77d304cbee0949acf6541dbe4/transformed/firebase-firestore-26.0.0/AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:26.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/614ffdf77d304cbee0949acf6541dbe4/transformed/firebase-firestore-26.0.0/AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:26.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/614ffdf77d304cbee0949acf6541dbe4/transformed/firebase-firestore-26.0.0/AndroidManifest.xml:21:17-111
+activity#com.google.firebase.auth.internal.GenericIdpActivity
+ADDED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:29:9-46:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:31:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:33:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:32:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:34:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:30:13-80
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
+ADDED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:35:13-45:29
+activity#com.google.firebase.auth.internal.RecaptchaActivity
+ADDED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:47:9-64:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:49:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:51:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:50:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:52:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:48:13-79
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
+ADDED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:53:13-63:29
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:69:13-71:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:71:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:24.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/430811e6c63a1a4a3521c80c36fbd6dc/transformed/firebase-auth-24.0.0/AndroidManifest.xml:70:17-109
+meta-data#com.google.firebase.components:com.google.firebase.storage.ktx.FirebaseStorageLegacyRegistrar
+ADDED from [com.google.firebase:firebase-storage-ktx:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/c8297e93f6d0e9a9692d7e18265c2da7/transformed/firebase-storage-ktx-21.0.2/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage-ktx:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/c8297e93f6d0e9a9692d7e18265c2da7/transformed/firebase-storage-ktx-21.0.2/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage-ktx:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/c8297e93f6d0e9a9692d7e18265c2da7/transformed/firebase-storage-ktx-21.0.2/AndroidManifest.xml:13:17-125
+meta-data#com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar
+ADDED from [com.google.firebase:firebase-storage:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/241d2bdcb84adbb80e99c35d13164429/transformed/firebase-storage-21.0.2/AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/241d2bdcb84adbb80e99c35d13164429/transformed/firebase-storage-21.0.2/AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/241d2bdcb84adbb80e99c35d13164429/transformed/firebase-storage-21.0.2/AndroidManifest.xml:31:17-118
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/241d2bdcb84adbb80e99c35d13164429/transformed/firebase-storage-21.0.2/AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/241d2bdcb84adbb80e99c35d13164429/transformed/firebase-storage-21.0.2/AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:21.0.2] /Users/hevincj/.gradle/caches/8.13/transforms/241d2bdcb84adbb80e99c35d13164429/transformed/firebase-storage-21.0.2/AndroidManifest.xml:34:17-107
+meta-data#com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar
+ADDED from [com.google.firebase:firebase-appcheck:17.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/2afd56ac8c146018a55e6785391b0f80/transformed/firebase-appcheck-17.1.0/AndroidManifest.xml:25:13-27:85
+	android:value
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/2afd56ac8c146018a55e6785391b0f80/transformed/firebase-appcheck-17.1.0/AndroidManifest.xml:27:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/2afd56ac8c146018a55e6785391b0f80/transformed/firebase-appcheck-17.1.0/AndroidManifest.xml:26:17-120
+meta-data#com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar
+ADDED from [com.google.firebase:firebase-appcheck:17.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/2afd56ac8c146018a55e6785391b0f80/transformed/firebase-appcheck-17.1.0/AndroidManifest.xml:28:13-30:85
+	android:value
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/2afd56ac8c146018a55e6785391b0f80/transformed/firebase-appcheck-17.1.0/AndroidManifest.xml:30:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/2afd56ac8c146018a55e6785391b0f80/transformed/firebase-appcheck-17.1.0/AndroidManifest.xml:29:17-117
+meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar
+ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/1eaf65c013ee305b24a36144e1042c24/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/1eaf65c013ee305b24a36144e1042c24/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/1eaf65c013ee305b24a36144e1042c24/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:22.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/3deb1801aa1e54dc4c53872cdc785d66/transformed/firebase-common-22.0.0/AndroidManifest.xml:23:9-28:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:22.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/3deb1801aa1e54dc4c53872cdc785d66/transformed/firebase-common-22.0.0/AndroidManifest.xml:25:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:22.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/3deb1801aa1e54dc4c53872cdc785d66/transformed/firebase-common-22.0.0/AndroidManifest.xml:27:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:22.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/3deb1801aa1e54dc4c53872cdc785d66/transformed/firebase-common-22.0.0/AndroidManifest.xml:26:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:22.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/3deb1801aa1e54dc4c53872cdc785d66/transformed/firebase-common-22.0.0/AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:22.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/3deb1801aa1e54dc4c53872cdc785d66/transformed/firebase-common-22.0.0/AndroidManifest.xml:24:13-77
+meta-data#com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar
+ADDED from [com.google.firebase:firebase-common:22.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/3deb1801aa1e54dc4c53872cdc785d66/transformed/firebase-common-22.0.0/AndroidManifest.xml:35:13-37:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common:22.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/3deb1801aa1e54dc4c53872cdc785d66/transformed/firebase-common-22.0.0/AndroidManifest.xml:37:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common:22.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/3deb1801aa1e54dc4c53872cdc785d66/transformed/firebase-common-22.0.0/AndroidManifest.xml:36:17-109
+service#androidx.credentials.playservices.CredentialProviderMetadataHolder
+ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:24:9-32:19
+	android:enabled
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:26:13-35
+	android:exported
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:28:13-60
+	android:name
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:25:13-94
+meta-data#androidx.credentials.CREDENTIAL_PROVIDER_KEY
+ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:29:13-31:104
+	android:value
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:31:17-101
+	android:name
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:30:17-76
+activity#androidx.credentials.playservices.HiddenActivity
+ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:34:9-41:20
+	android:fitsSystemWindows
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:39:13-45
+	android:enabled
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:38:13-37
+	android:configChanges
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:36:13-87
+	android:theme
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:40:13-48
+	android:name
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/hevincj/.gradle/caches/8.13/transforms/17cb60262c6e4f8499177270f23befa1/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:35:13-76
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/hevincj/.gradle/caches/8.13/transforms/889e580798ac56b0e561cec45917dc5c/transformed/play-services-auth-20.7.0/AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/hevincj/.gradle/caches/8.13/transforms/889e580798ac56b0e561cec45917dc5c/transformed/play-services-auth-20.7.0/AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/hevincj/.gradle/caches/8.13/transforms/889e580798ac56b0e561cec45917dc5c/transformed/play-services-auth-20.7.0/AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/hevincj/.gradle/caches/8.13/transforms/889e580798ac56b0e561cec45917dc5c/transformed/play-services-auth-20.7.0/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/hevincj/.gradle/caches/8.13/transforms/889e580798ac56b0e561cec45917dc5c/transformed/play-services-auth-20.7.0/AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/hevincj/.gradle/caches/8.13/transforms/889e580798ac56b0e561cec45917dc5c/transformed/play-services-auth-20.7.0/AndroidManifest.xml:33:9-37:51
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/hevincj/.gradle/caches/8.13/transforms/889e580798ac56b0e561cec45917dc5c/transformed/play-services-auth-20.7.0/AndroidManifest.xml:35:13-36
+	android:visibleToInstantApps
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/hevincj/.gradle/caches/8.13/transforms/889e580798ac56b0e561cec45917dc5c/transformed/play-services-auth-20.7.0/AndroidManifest.xml:37:13-48
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/hevincj/.gradle/caches/8.13/transforms/889e580798ac56b0e561cec45917dc5c/transformed/play-services-auth-20.7.0/AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/hevincj/.gradle/caches/8.13/transforms/889e580798ac56b0e561cec45917dc5c/transformed/play-services-auth-20.7.0/AndroidManifest.xml:34:13-89
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/865fd0914850196c62b273c683202707/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/865fd0914850196c62b273c683202707/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/865fd0914850196c62b273c683202707/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/hevincj/.gradle/caches/8.13/transforms/865fd0914850196c62b273c683202707/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from [com.google.android.recaptcha:recaptcha:18.6.1] /Users/hevincj/.gradle/caches/8.13/transforms/b4e9e87742ef0a29508cc554912a1186/transformed/recaptcha-18.6.1/AndroidManifest.xml:9:5-98
+	android:name
+		ADDED from [com.google.android.recaptcha:recaptcha:18.6.1] /Users/hevincj/.gradle/caches/8.13/transforms/b4e9e87742ef0a29508cc554912a1186/transformed/recaptcha-18.6.1/AndroidManifest.xml:9:22-95
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/fbe20ee3310bcd7af5d261f85d2c1512/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/fbe20ee3310bcd7af5d261f85d2c1512/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/fbe20ee3310bcd7af5d261f85d2c1512/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/fbe20ee3310bcd7af5d261f85d2c1512/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/fbe20ee3310bcd7af5d261f85d2c1512/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /Users/hevincj/.gradle/caches/8.13/transforms/fbe20ee3310bcd7af5d261f85d2c1512/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/63b5f83514be0c6650484ee69573af3e/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/4ef0d75ff99564f6845f6a654a8b1f09/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/4ef0d75ff99564f6845f6a654a8b1f09/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hevincj/.gradle/caches/8.13/transforms/c4e54af7a8fcb8cf0ed9355646046c51/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hevincj/.gradle/caches/8.13/transforms/c4e54af7a8fcb8cf0ed9355646046c51/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/63b5f83514be0c6650484ee69573af3e/transformed/emoji2-1.4.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/63b5f83514be0c6650484ee69573af3e/transformed/emoji2-1.4.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/63b5f83514be0c6650484ee69573af3e/transformed/emoji2-1.4.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/63b5f83514be0c6650484ee69573af3e/transformed/emoji2-1.4.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/63b5f83514be0c6650484ee69573af3e/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/63b5f83514be0c6650484ee69573af3e/transformed/emoji2-1.4.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/63b5f83514be0c6650484ee69573af3e/transformed/emoji2-1.4.0/AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/cf553f4a9e352257fddf8e25185f8a66/transformed/core-1.16.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/cf553f4a9e352257fddf8e25185f8a66/transformed/core-1.16.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/cf553f4a9e352257fddf8e25185f8a66/transformed/core-1.16.0/AndroidManifest.xml:23:9-81
+permission#com.example.grocerlypartners.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/cf553f4a9e352257fddf8e25185f8a66/transformed/core-1.16.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/cf553f4a9e352257fddf8e25185f8a66/transformed/core-1.16.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/cf553f4a9e352257fddf8e25185f8a66/transformed/core-1.16.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/cf553f4a9e352257fddf8e25185f8a66/transformed/core-1.16.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/cf553f4a9e352257fddf8e25185f8a66/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
+uses-permission#com.example.grocerlypartners.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/cf553f4a9e352257fddf8e25185f8a66/transformed/core-1.16.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.16.0] /Users/hevincj/.gradle/caches/8.13/transforms/cf553f4a9e352257fddf8e25185f8a66/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/4ef0d75ff99564f6845f6a654a8b1f09/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/4ef0d75ff99564f6845f6a654a8b1f09/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.9.2] /Users/hevincj/.gradle/caches/8.13/transforms/4ef0d75ff99564f6845f6a654a8b1f09/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:30:17-78
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/ce2ba1df79fba1adffcefbe95e9d7d85/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/ce2ba1df79fba1adffcefbe95e9d7d85/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.4.0] /Users/hevincj/.gradle/caches/8.13/transforms/ce2ba1df79fba1adffcefbe95e9d7d85/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.1] /Users/hevincj/.gradle/caches/8.13/transforms/a1f8e09c8e4cbd8dfee81682ca23cfad/transformed/profileinstaller-1.4.1/AndroidManifest.xml:50:25-92
+activity#com.google.android.play.core.common.PlayCoreDialogWrapperActivity
+ADDED from [com.google.android.play:core-common:2.0.3] /Users/hevincj/.gradle/caches/8.13/transforms/eb9be31dcc681d5dd2077ddcd2ba7533/transformed/core-common-2.0.3/AndroidManifest.xml:14:9-18:65
+	android:stateNotNeeded
+		ADDED from [com.google.android.play:core-common:2.0.3] /Users/hevincj/.gradle/caches/8.13/transforms/eb9be31dcc681d5dd2077ddcd2ba7533/transformed/core-common-2.0.3/AndroidManifest.xml:17:13-42
+	android:exported
+		ADDED from [com.google.android.play:core-common:2.0.3] /Users/hevincj/.gradle/caches/8.13/transforms/eb9be31dcc681d5dd2077ddcd2ba7533/transformed/core-common-2.0.3/AndroidManifest.xml:16:13-37
+	android:theme
+		ADDED from [com.google.android.play:core-common:2.0.3] /Users/hevincj/.gradle/caches/8.13/transforms/eb9be31dcc681d5dd2077ddcd2ba7533/transformed/core-common-2.0.3/AndroidManifest.xml:18:13-62
+	android:name
+		ADDED from [com.google.android.play:core-common:2.0.3] /Users/hevincj/.gradle/caches/8.13/transforms/eb9be31dcc681d5dd2077ddcd2ba7533/transformed/core-common-2.0.3/AndroidManifest.xml:15:13-93

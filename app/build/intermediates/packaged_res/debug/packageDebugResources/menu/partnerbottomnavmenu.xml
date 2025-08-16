@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/products"
+        android:icon="@drawable/grocery"
+        android:title="Products"
+        />
+
+    <item android:id="@+id/offers"
+        android:title="Offers"
+        android:icon="@drawable/discount"
+        />
+
+
+    <item android:id="@+id/business"
+        android:icon="@drawable/stats"
+        android:title="Business" />
+
+    <item android:id="@+id/orders"
+        android:title="Orders"
+        android:icon="@drawable/icons8orders"
+        />
+
+
+    <item android:id="@+id/settings"
+        android:title="Settings"
+        android:icon="@drawable/setting"
+        />
+
+</menu>
