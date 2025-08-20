@@ -4,10 +4,12 @@ import android.app.AlertDialog
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.StyleSpan
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.grocerlypartners.databinding.ReadyRcLayoutBinding
+import com.example.grocerlypartners.model.CartProduct
 import com.example.grocerlypartners.model.Order
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -18,12 +20,14 @@ class ReadyAdaptor(
     private val onDelete:(Order) -> Unit
 ): BaseOrderAdaptor() {
 
+    private var cancelledItems: Map<String, List<CartProduct>> = emptyMap()
+
     inner class ReadyViewHolder(private val binding: ReadyRcLayoutBinding): BaseOrderViewHolder(binding.root){
         override fun bind(order: Order) {
            if (order.items.isNotEmpty()){
                binding.apply {
                    materialcardviewcancelled.visibility = View.INVISIBLE
-                   materialCardView4.visibility = View.VISIBLE
+                   materialCardView.visibility = View.VISIBLE
 
                    txtvieworderId.text = order.orderId
 
@@ -39,10 +43,7 @@ class ReadyAdaptor(
 
                    txtvieworders.text = buildString {
                        order.items.forEach {
-                           append(it.product.itemName)
-                           append(" × ")
-                           append(it.quantity)
-                           appendLine()
+                           appendLine(it.product.itemName + " × " + it.quantity)
                        }
                    }
                    acceptbtn.setOnClickListener {
@@ -65,12 +66,29 @@ class ReadyAdaptor(
                        )
                    }
 
+                   val cancelledForThisOrder = cancelledItems[order.orderId].orEmpty()
+
+                   if (cancelledForThisOrder.isNotEmpty()) {
+                       txtviewcancelled.visibility = View.VISIBLE
+                       cancelleditemsorders.visibility = View.VISIBLE
+
+                       cancelleditemsorders.text = buildString {
+                           cancelledForThisOrder.forEach {
+                               Log.d("TAGcancelled", "bind: ${it.product.itemName}")
+                               appendLine(it.product.itemName + " × " + it.quantity)
+                           }
+                       }
+                   } else {
+                       txtviewcancelled.visibility = View.GONE
+                       cancelleditemsorders.visibility = View.GONE
+                   }
+
                }
            }else{
                binding.apply {
                    binding.txtvieworderidcancelled.text = order.orderId
                    materialcardviewcancelled.visibility = View.VISIBLE
-                   materialCardView4.visibility = View.INVISIBLE
+                   materialCardView.visibility = View.INVISIBLE
 
 
                    cancelleddeletebtn.setOnClickListener {
@@ -106,5 +124,10 @@ class ReadyAdaptor(
     ): BaseOrderViewHolder {
         val binding = ReadyRcLayoutBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return ReadyViewHolder(binding)
+    }
+
+    fun setCancelledItems(items:Map<String, List<CartProduct>>){
+        this.cancelledItems = items
+        notifyDataSetChanged()
     }
 }

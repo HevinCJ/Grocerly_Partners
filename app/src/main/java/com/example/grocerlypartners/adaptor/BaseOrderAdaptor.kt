@@ -16,6 +16,7 @@ abstract class BaseOrderAdaptor: ListAdapter<Order, BaseOrderAdaptor.BaseOrderVi
             override fun areContentsTheSame(oldItem: Order, newItem: Order): Boolean =
                 oldItem == newItem
         }
+
     }
 
 
@@ -25,6 +26,7 @@ abstract class BaseOrderAdaptor: ListAdapter<Order, BaseOrderAdaptor.BaseOrderVi
 
     override fun onBindViewHolder(holder: BaseOrderViewHolder, position: Int) {
         holder.bind(getItem(position))
+
     }
 
 

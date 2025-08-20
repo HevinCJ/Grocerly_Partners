@@ -20,11 +20,12 @@ import com.example.grocerlypartners.utils.NetworkResult
 import com.example.grocerlypartners.utils.OrderStatus
 import com.example.grocerlypartners.utils.OrderUiState
 import com.example.grocerlypartners.viewmodel.OrdersSharedViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.filterIsInstance
 import kotlinx.coroutines.launch
 
-
+@AndroidEntryPoint
 class Ready : Fragment() {
     private var ready: FragmentReadyBinding?=null
     private val binding get() = ready!!
@@ -49,11 +50,38 @@ class Ready : Fragment() {
         setReadyAdaptor()
         observeReadyState()
         observeOrderStatus()
+        observeCancelledOrders()
+    }
+
+    private fun observeCancelledOrders() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            ordersSharedViewModel.orders.filterIsInstance<OrderUiState.Cancelled>().collectLatest {
+                when(it.result){
+                    is NetworkResult.Error<*> -> {
+                        Toast.makeText(requireContext(), it.result.message, Toast.LENGTH_SHORT).show()
+                        loadingDialogue.dismiss()
+                    }
+                    is NetworkResult.Loading<*> -> {
+                        loadingDialogue.show()
+                    }
+                    is NetworkResult.Success<*> -> {
+                        it.result.data?.let {orders ->
+                            readyAdaptor.setCancelledItems(orders)
+                        }
+                        loadingDialogue.dismiss()
+                    }
+                    is NetworkResult.UnSpecified<*> -> {
+                        loadingDialogue.dismiss()
+                    }
+                }
+            }
+        }
     }
 
     override fun onResume() {
         super.onResume()
         ordersSharedViewModel.getReadyOrders()
+        ordersSharedViewModel.getCancelledOrders()
     }
 
     private fun observeOrderStatus() {

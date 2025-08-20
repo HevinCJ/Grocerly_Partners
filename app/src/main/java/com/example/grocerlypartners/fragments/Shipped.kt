@@ -20,10 +20,12 @@ import com.example.grocerlypartners.utils.NetworkResult
 import com.example.grocerlypartners.utils.OrderStatus
 import com.example.grocerlypartners.utils.OrderUiState
 import com.example.grocerlypartners.viewmodel.OrdersSharedViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.filterIsInstance
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class Shipped : Fragment() {
     private var shipped: FragmentShippedBinding?=null
     private val binding get() = shipped!!
@@ -48,12 +50,33 @@ class Shipped : Fragment() {
         setRcShippedAdaptor()
         observeShippedOrders()
         observeOrderStatus()
+        observeCancelledOrders()
+    }
+
+
+
+    private fun observeCancelledOrders() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            ordersSharedViewModel.orders.filterIsInstance<OrderUiState.Cancelled>().collectLatest {
+                loadingDialogue.dismiss()
+                if(it.result is NetworkResult.Success){
+                    it.result.data?.let {orders ->
+                        shippedAdaptor.setCancelledItems(orders)
+                    }
+
+                    if (it.result is NetworkResult.Error){
+                        Toast.makeText(requireContext(), it.result.message.toString(), Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        }
     }
 
     private fun observeOrderStatus() {
         viewLifecycleOwner.lifecycleScope.launch {
             ordersSharedViewModel.orders.filterIsInstance<OrderUiState.OrderStatus>().collectLatest {
                 if (it.result is NetworkResult.Error){
+                    loadingDialogue.dismiss()
                     Toast.makeText(requireContext(),it.result.message, Toast.LENGTH_SHORT).show()
                 }
             }
@@ -64,6 +87,7 @@ class Shipped : Fragment() {
     override fun onResume() {
         super.onResume()
         ordersSharedViewModel.getShippedOrders()
+        ordersSharedViewModel.getCancelledOrders()
     }
 
     private fun setRcShippedAdaptor() {

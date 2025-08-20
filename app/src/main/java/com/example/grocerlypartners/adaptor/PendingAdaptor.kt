@@ -35,10 +35,7 @@ class PendingAdaptor(
 
                 txtvieworders.text = buildString {
                     order.items.forEach {
-                        append(it.product.itemName)
-                        append(" × ")
-                        append(it.quantity)
-                        appendLine()
+                        appendLine(it.product.itemName + " × " + it.quantity)
                     }
                 }
                 acceptbtn.setOnClickListener {

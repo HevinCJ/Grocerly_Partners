@@ -9,4 +9,5 @@ sealed class OrderUiState {
     class Ready(val result: NetworkResult<List<Order>>) : OrderUiState()
     class Shipped(val result: NetworkResult<List<Order>>) : OrderUiState()
     class OrderStatus(val result: NetworkResult<Unit> ): OrderUiState()
+    class Cancelled(val result: NetworkResult<Map<String, List<CartProduct>>>) : OrderUiState()
 }

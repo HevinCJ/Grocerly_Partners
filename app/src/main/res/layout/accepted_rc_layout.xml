@@ -72,13 +72,15 @@
                 app:layout_constraintStart_toStartOf="@+id/textView9"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,7 +109,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="352345234" />
-
 
 
             <TextView
@@ -162,21 +163,45 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtviworder"
                 tools:text="TextView" />
 
+            <TextView
+                android:id="@+id/txtviewcancelled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Cancelled Items"
+                android:textColor="@color/black"
+                android:textFontWeight="600"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/txtvieworders"
+                app:layout_constraintTop_toBottomOf="@+id/txtvieworders" />
+
+            <TextView
+                android:id="@+id/cancelleditemsorders"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/red"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txtviewcancelled"
+                app:layout_constraintTop_toBottomOf="@+id/txtviewcancelled"
+                tools:text="TextView" />
+
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/acceptbtn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="3dp"
                 android:backgroundTint="@color/green"
                 android:text="Mark as Ready"
                 android:textColor="@color/white"
                 app:cornerRadius="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@+id/txtviewpaymentmeth"
+                app:layout_constraintEnd_toEndOf="@+id/txtvieworders"
+                app:layout_constraintStart_toStartOf="@+id/txtvieworders"
                 app:layout_constraintTop_toBottomOf="@+id/txtviewpaymentmeth" />
 
 
@@ -195,16 +220,11 @@
                 android:id="@+id/txtviewpaymentmeth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="@+id/txtvieworders"
-                app:layout_constraintTop_toBottomOf="@+id/txtvieworders"
+                app:layout_constraintTop_toBottomOf="@+id/cancelleditemsorders"
                 tools:text="Payment by : Card" />
-
-
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

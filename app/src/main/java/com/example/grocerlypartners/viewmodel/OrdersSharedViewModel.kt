@@ -39,6 +39,7 @@ class OrdersSharedViewModel @Inject constructor(private val ordersRepoImpl: Orde
     private val _acceptedOrders =MutableStateFlow<NetworkResult<List<Order>>>(NetworkResult.UnSpecified())
     private val _readyOrders = MutableStateFlow<NetworkResult<List<Order>>>(NetworkResult.UnSpecified())
     private val _shippedOrders = MutableStateFlow<NetworkResult<List<Order>>>(NetworkResult.UnSpecified())
+    private val _cancelledOrders = MutableStateFlow<NetworkResult<Map<String, List<CartProduct>>>>(NetworkResult.UnSpecified())
 
 
     init {
@@ -47,8 +48,9 @@ class OrdersSharedViewModel @Inject constructor(private val ordersRepoImpl: Orde
         getShippedOrders()
         getReadyOrders()
         cleanCancelledOrders()
+        getCancelledOrders()
 
-        merge(_pendingOrders.map { OrderUiState.Pending(it) },_acceptedOrders.map { OrderUiState.Accepted(it) },_readyOrders.map { OrderUiState.Ready(it) },_shippedOrders.map { OrderUiState.Shipped(it) },_orderStatus.map { OrderUiState.OrderStatus(it) }).onEach {it
+        merge(_pendingOrders.map { OrderUiState.Pending(it) },_acceptedOrders.map { OrderUiState.Accepted(it) },_readyOrders.map { OrderUiState.Ready(it) },_shippedOrders.map { OrderUiState.Shipped(it) },_orderStatus.map { OrderUiState.OrderStatus(it) },_cancelledOrders.map { OrderUiState.Cancelled(it) }).onEach {it
             _orders.emit(it)
         }.launchIn(viewModelScope)
     }
@@ -90,6 +92,14 @@ class OrdersSharedViewModel @Inject constructor(private val ordersRepoImpl: Orde
         viewModelScope.launch {
             ordersRepoImpl.fetchShippedOrders().collectLatest {
                 _shippedOrders.emit(it)
+            }
+        }
+    }
+
+    fun getCancelledOrders(){
+        viewModelScope.launch {
+            ordersRepoImpl.fetchCancelledItems().collectLatest {
+                _cancelledOrders.emit(it)
             }
         }
     }
