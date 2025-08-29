@@ -12,7 +12,7 @@ import com.example.grocerlypartners.utils.CancellationStatus
 import com.example.grocerlypartners.utils.NetworkResult
 import com.example.grocerlypartners.utils.NetworkUtils
 import com.example.grocerlypartners.utils.OrderStatus
-import com.example.grocerlypartners.utils.OrderUiState
+import com.example.grocerlypartners.model.OrderUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -49,6 +49,7 @@ class OrdersSharedViewModel @Inject constructor(private val ordersRepoImpl: Orde
         getReadyOrders()
         cleanCancelledOrders()
         getCancelledOrders()
+
 
         merge(_pendingOrders.map { OrderUiState.Pending(it) },_acceptedOrders.map { OrderUiState.Accepted(it) },_readyOrders.map { OrderUiState.Ready(it) },_shippedOrders.map { OrderUiState.Shipped(it) },_orderStatus.map { OrderUiState.OrderStatus(it) },_cancelledOrders.map { OrderUiState.Cancelled(it) }).onEach {it
             _orders.emit(it)

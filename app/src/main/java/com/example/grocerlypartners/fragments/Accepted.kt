@@ -16,7 +16,7 @@ import com.example.grocerlypartners.databinding.FragmentAcceptedBinding
 import com.example.grocerlypartners.utils.LoadingDialogue
 import com.example.grocerlypartners.utils.NetworkResult
 import com.example.grocerlypartners.utils.OrderStatus
-import com.example.grocerlypartners.utils.OrderUiState
+import com.example.grocerlypartners.model.OrderUiState
 import com.example.grocerlypartners.viewmodel.OrdersSharedViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest

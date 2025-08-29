@@ -196,7 +196,6 @@ class AddProduct : Fragment() {
     private fun getImageFromStorage() {
         binding.apply {
             imgviewitemimg.setOnClickListener {
-                Log.d("imagepick", "Image picker launched ✅")
                 galleryLauncher.launch("image/*")
             }
         }

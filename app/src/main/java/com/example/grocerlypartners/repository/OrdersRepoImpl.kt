@@ -24,6 +24,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.tasks.await
 import okhttp3.internal.filterList
+import timber.log.Timber
 import javax.inject.Inject
 
 
@@ -34,6 +35,7 @@ class OrdersRepoImpl @Inject constructor(private val auth: FirebaseAuth,private 
 
     private val userId  = auth.currentUser?.uid.toString()
     private val orderRef = db.collection(PARTNERS).document(userId).collection(ORDERS)
+    private val globalRef = db.collection(ORDERS)
 
 
     fun fetchPendingOrders(): Flow<NetworkResult<List<Order>>> = callbackFlow {
@@ -58,7 +60,7 @@ class OrdersRepoImpl @Inject constructor(private val auth: FirebaseAuth,private 
                .filter { order ->
                    val sellerItems = order.items.filter { it.product.partnerId == userId  }
 
-                   val hasActivePendingItems = sellerItems.any {
+                   val hasActivePendingItems = sellerItems.all {
                        it.orderStatus == OrderStatus.PENDING &&
                                it.cancellationInfo.cancellationStatus == CancellationStatus.Non_Cancelled
                    }
@@ -97,29 +99,35 @@ class OrdersRepoImpl @Inject constructor(private val auth: FirebaseAuth,private 
             val acceptedOrders = snapshot.documents
                 .mapNotNull { it.toObject(Order::class.java) }
                 .filter { order ->
-                    val sellerItems = order.items.filter { it.product.partnerId == userId  }
-
-                    val hasDeliveredItems = sellerItems.any { it.deliveredDate != 0L }
-                    if (hasDeliveredItems) return@filter false
-
-                    val hasAcceptedItems = sellerItems.any { it.orderStatus == OrderStatus.ACCEPTED }
-                    if (!hasAcceptedItems) return@filter false
-
-                    val hasOtherStatuses = sellerItems.any {
-                        it.orderStatus != OrderStatus.ACCEPTED
+                    val hasAcceptedItems = order.items.all { item ->
+                        item.product.partnerId == userId && item.orderStatus == OrderStatus.ACCEPTED
                     }
-                    if (hasOtherStatuses) return@filter false
 
-                   true
+                    val hasDeliveredItems = order.items.any { item ->
+                        item.product.partnerId == userId && item.orderStatus == OrderStatus.DELIVERED
+                    }
 
-                }.map {order ->
-                    order.copy(
-                        items = order.items.filter {
-                            it.product.partnerId == userId && it.orderStatus == OrderStatus.ACCEPTED &&
-                                    it.cancellationInfo.cancellationStatus == CancellationStatus.Non_Cancelled
-                                    &&it.deliveredDate == 0L
-                        }
-                    )
+                    hasAcceptedItems && !hasDeliveredItems
+
+                } .map { order ->
+                    val sellerItems = order.items.filter { it.product.partnerId == userId && it.orderStatus == OrderStatus.ACCEPTED }
+
+                    val hasActiveItems = sellerItems.any {
+                        it.cancellationInfo.cancellationStatus == CancellationStatus.Non_Cancelled
+                    }
+                    Log.d("hasactive",hasActiveItems.toString())
+                    if (hasActiveItems) {
+                        order.copy(
+                            items = sellerItems.filter { it.cancellationInfo.cancellationStatus == CancellationStatus.Non_Cancelled },
+                            isFullyCancelledForSeller = false
+                        )
+                    } else {
+                        order.copy(
+
+                            items = sellerItems,
+                            isFullyCancelledForSeller = true
+                        )
+                    }
                 }
 
             trySend(NetworkResult.Success(acceptedOrders))
@@ -150,28 +158,36 @@ class OrdersRepoImpl @Inject constructor(private val auth: FirebaseAuth,private 
             val readyOrders = snapshot.documents
                 .mapNotNull { it.toObject(Order::class.java) }
                 .filter { order ->
-                    val sellerItems = order.items.filter { it.product.partnerId == userId  }
-                    val hadReadyItems = sellerItems.any { it.orderStatus == OrderStatus.READY }
-                    val hasActiveReadyItems = sellerItems.any {
-                        it.orderStatus == OrderStatus.READY &&
-                                it.cancellationInfo.cancellationStatus == CancellationStatus.Non_Cancelled
+                    val hasReadyItems = order.items.all { item ->
+                        item.product.partnerId == userId && item.orderStatus == OrderStatus.READY
                     }
 
-                    val hasNotActiveReadyItems = sellerItems.any {
-                        it.orderStatus == OrderStatus.READY &&
-                                it.cancellationInfo.cancellationStatus == CancellationStatus.Cancelled
+                    val hasDeliveredItems = order.items.any { item ->
+                        item.product.partnerId == userId && item.orderStatus == OrderStatus.DELIVERED
                     }
-                    // Keep order if it had READY items, even if all are now cancelled
-                    hadReadyItems&& (hasActiveReadyItems||hasNotActiveReadyItems)
+
+                    hasReadyItems && !hasDeliveredItems
+
                 }
                 .map { order ->
-                    order.copy(
-                        items = order.items.filter { item ->
-                            item.product.partnerId == userId &&
-                                    item.orderStatus == OrderStatus.READY &&
-                                    item.cancellationInfo.cancellationStatus == CancellationStatus.Non_Cancelled
-                        }
-                    )
+                    val sellerItems = order.items.filter { it.product.partnerId == userId && it.orderStatus == OrderStatus.READY }
+
+                    val hasActiveItems = sellerItems.any {
+                        it.cancellationInfo.cancellationStatus == CancellationStatus.Non_Cancelled
+                    }
+
+                    if (hasActiveItems) {
+                        order.copy(
+                            items = sellerItems.filter { it.cancellationInfo.cancellationStatus == CancellationStatus.Non_Cancelled },
+                            isFullyCancelledForSeller = false
+                        )
+                    } else {
+                        order.copy(
+                            items = sellerItems,
+                            isFullyCancelledForSeller = true
+                        )
+                    }
+
                 }
 
             trySend(NetworkResult.Success(readyOrders))
@@ -186,7 +202,7 @@ class OrdersRepoImpl @Inject constructor(private val auth: FirebaseAuth,private 
 
     fun fetchCancelledItems(): Flow<NetworkResult< Map<String, List<CartProduct>>>> = callbackFlow {
 
-        val listener = orderRef.addSnapshotListener { snapshot, error ->
+        val listener = globalRef.addSnapshotListener { snapshot, error ->
             if (error != null) {
                 trySend(NetworkResult.Error(error.message))
                 return@addSnapshotListener
@@ -213,7 +229,8 @@ class OrdersRepoImpl @Inject constructor(private val auth: FirebaseAuth,private 
 
 
                 trySend(NetworkResult.Success(orderIdFilteredItems))
-                Log.d("cancelledones",orderIdFilteredItems.toString())
+                Timber.d("cancelled items: $orderIdFilteredItems")
+
             }
 
         }
@@ -289,24 +306,74 @@ class OrdersRepoImpl @Inject constructor(private val auth: FirebaseAuth,private 
 
               val order = documentSnapshot.toObject(Order::class.java) ?: return@forEach
 
-              val filteredItems = order.items.filterNot { item ->
+              val filteredItems = order.items.all { item ->
                  item.product.partnerId == userId &&
                           item.orderStatus == OrderStatus.PENDING&&
                          item.cancellationInfo.cancellationStatus == CancellationStatus.Cancelled
 
               }
-              Log.d("filterditems",filteredItems.toString())
 
-
-              if (filteredItems.isEmpty()) {
+              if (filteredItems) {
                   clearCancelledBatch.delete(documentSnapshot.reference)
               }
+
+              Log.d("filterditems",filteredItems.toString())
+
           }
 
           clearCancelledBatch.commit().await()
       }catch (e: Exception){
           Log.d("cancelledexception",e.message.toString())
       }
+    }
+
+
+    fun fetchAllActiveOrders(): Flow<NetworkResult<List<Order>>> = callbackFlow {
+        trySend(NetworkResult.Loading())
+
+        val activeStatuses = setOf(
+            OrderStatus.SHIPPED,
+            OrderStatus.OUTFORDELIVERY,
+            OrderStatus.DELIVERED
+        )
+
+        val listener = globalRef.addSnapshotListener { snapshot, exception ->
+            if (exception != null) {
+                trySend(NetworkResult.Error(exception.message))
+                return@addSnapshotListener
+            }
+
+            if (snapshot == null || snapshot.isEmpty) {
+                trySend(NetworkResult.Success(emptyList()))
+                return@addSnapshotListener
+            }
+
+            val allActiveOrders = snapshot.documents
+                .mapNotNull { it.toObject(Order::class.java) }
+                .filter {
+                    it.items.any { item ->
+                        item.product.partnerId == userId &&
+                                item.cancellationInfo.cancellationStatus == CancellationStatus.Non_Cancelled &&
+                                item.orderStatus in activeStatuses
+                    }
+                }
+                .map { order ->
+                    order.copy(
+                        items = order.items.filter { item ->
+                            item.product.partnerId == userId &&
+                                    item.cancellationInfo.cancellationStatus == CancellationStatus.Non_Cancelled &&
+                                    item.orderStatus in activeStatuses
+                        }
+                    )
+                }
+
+            trySend(NetworkResult.Success(allActiveOrders))
+            Log.d("activeorders",allActiveOrders.toString())
+        }
+
+        awaitClose {
+            listener.remove()
+        }
     }
 
 
@@ -422,6 +489,7 @@ class OrdersRepoImpl @Inject constructor(private val auth: FirebaseAuth,private 
         return mapOf(
             "product" to product,
             "quantity" to quantity,
+            "orderedTime" to orderedTime,
             "deliveryDate" to deliveryDate,
             "deliveredDate" to deliveredDate,
             "orderStatus" to orderStatus,

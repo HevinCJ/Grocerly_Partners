@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import com.example.grocerlypartners.databinding.AcceptedRcLayoutBinding
 import com.example.grocerlypartners.model.CartProduct
 import com.example.grocerlypartners.model.Order
+import com.example.grocerlypartners.utils.CancellationStatus
 import com.example.grocerlypartners.utils.OrderStatus
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -28,10 +29,10 @@ class AcceptedAdaptor(
 
         override fun bind(order: Order) {
 
+            if (!order.isFullyCancelledForSeller){
                 binding.apply {
                     materialcardviewcancelled.visibility = View.INVISIBLE
                     materialCardView.visibility = View.VISIBLE
-
 
                     txtvieworderId.text = order.orderId
 
@@ -70,10 +71,6 @@ class AcceptedAdaptor(
                         )
                     }
 
-
-
-
-
                     val cancelledForThisOrder = cancelledItems[order.orderId].orEmpty()
 
                     if (cancelledForThisOrder.isNotEmpty()) {
@@ -82,7 +79,6 @@ class AcceptedAdaptor(
 
                         cancelleditemsorders.text = buildString {
                             cancelledForThisOrder.forEach {
-                                Log.d("TAGcancelled", "bind: ${it.product.itemName}")
                                 appendLine(it.product.itemName + " × " + it.quantity)
                             }
                         }
@@ -92,13 +88,11 @@ class AcceptedAdaptor(
                     }
 
                 }
-
-
-            if (order.items.isEmpty() && cancelledItems.size > order.items.size && order.items.any { it.orderStatus == OrderStatus.ACCEPTED }){
-                binding.materialcardviewcancelled.visibility = View.VISIBLE
-                binding.materialCardView.visibility = View.INVISIBLE
-
+            }else{
                 binding.apply {
+                    binding.txtvieworderidcancelled.text = order.orderId
+                    materialcardviewcancelled.visibility = View.VISIBLE
+                    materialCardView.visibility = View.INVISIBLE
 
 
                     cancelleddeletebtn.setOnClickListener {

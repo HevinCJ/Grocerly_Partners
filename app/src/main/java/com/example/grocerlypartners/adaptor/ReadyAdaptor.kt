@@ -24,7 +24,7 @@ class ReadyAdaptor(
 
     inner class ReadyViewHolder(private val binding: ReadyRcLayoutBinding): BaseOrderViewHolder(binding.root){
         override fun bind(order: Order) {
-           if (order.items.isNotEmpty()){
+           if (!order.isFullyCancelledForSeller){
                binding.apply {
                    materialcardviewcancelled.visibility = View.INVISIBLE
                    materialCardView.visibility = View.VISIBLE

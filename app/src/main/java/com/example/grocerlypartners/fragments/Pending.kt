@@ -24,7 +24,7 @@ import com.example.grocerlypartners.utils.CancellationStatus
 import com.example.grocerlypartners.utils.LoadingDialogue
 import com.example.grocerlypartners.utils.NetworkResult
 import com.example.grocerlypartners.utils.OrderStatus
-import com.example.grocerlypartners.utils.OrderUiState
+import com.example.grocerlypartners.model.OrderUiState
 import com.example.grocerlypartners.utils.Reason
 import com.example.grocerlypartners.viewmodel.OrdersSharedViewModel
 import dagger.hilt.android.AndroidEntryPoint
